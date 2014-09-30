@@ -1,0 +1,107 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Interpreter</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">&lt;empty package name&gt;</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Interpreter (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Interpreter</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (1/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    41.7%
+  </span>
+  <span class="absValue">
+    (5/ 12)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;import java.io.FileNotFoundException;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;/**
+<i>4</i>&nbsp; *
+<i>5</i>&nbsp; */
+<b class="nc"><i>6</i>&nbsp;public class Interpreter {</b>
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;    /**
+<i>9</i>&nbsp;     * @param args Command line arguments
+<i>10</i>&nbsp;     */
+<i>11</i>&nbsp;    public static void main(String[] args) {
+<i>12</i>&nbsp;        try {
+<b class="fc"><i>13</i>&nbsp;            Parser p = new Parser(System.getProperty(&quot;user.dir&quot;) + &quot;/test_data/test3.e&quot;);</b>
+<b class="fc"><i>14</i>&nbsp;            p.execute();</b>
+<b class="fc"><i>15</i>&nbsp;            Memory.displayMemory();</b>
+<b class="nc"><i>16</i>&nbsp;        } catch (ParserException e) {</b>
+<b class="nc"><i>17</i>&nbsp;            e.printStackTrace();</b>
+<b class="nc"><i>18</i>&nbsp;        } catch (FileNotFoundException e) {</b>
+<b class="nc"><i>19</i>&nbsp;            e.printStackTrace();</b>
+<b class="nc"><i>20</i>&nbsp;        } catch (LexicalException e) {</b>
+<b class="nc"><i>21</i>&nbsp;            e.printStackTrace();</b>
+<b class="fc"><i>22</i>&nbsp;        }</b>
+<b class="fc"><i>23</i>&nbsp;    }</b>
+<i>24</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2014-09-29 08:49</div>
+</div>
+</body>
+</html>
