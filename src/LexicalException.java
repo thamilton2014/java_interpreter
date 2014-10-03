@@ -1,12 +1,11 @@
 /**
- * The LexicalException class is used to report any lexical errors.
+ * The LexicalException class
  */
 public class LexicalException extends Exception {
     /**
-     * @param string -
+     * @param string - display error
      */
     public LexicalException(String string) {
-        // TODO Auto-generated constructor stub
         System.out.println("[Lexical Exception] " + string);
     }
 }

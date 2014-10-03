@@ -1,0 +1,14 @@
+#!/bin/bash --login
+
+FILE=$1
+if [ -z "$FILE" ]; then
+  echo "usage: sh run-fast <file>"
+  exit 1
+fi
+
+java -jar "${PWD}/out/artifacts/Example_project_jar/Example_project.jar" "$FILE" 
+if [ "$?" -eq 0 ]; then
+  echo "Success!"
+else
+  echo "Failed!"
+fi

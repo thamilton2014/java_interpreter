@@ -73,37 +73,35 @@
 
 
 <div class="sourceCode"><i>1</i>&nbsp;/**
-<i>2</i>&nbsp; * Created by thamilton on 9/27/14.
+<i>2</i>&nbsp; * The PrintStatement class
 <i>3</i>&nbsp; */
 <i>4</i>&nbsp;public class PrintStatement implements Statement {
 <i>5</i>&nbsp;
-<i>6</i>&nbsp;    Expression expression;
+<i>6</i>&nbsp;    private Expression expression;
 <i>7</i>&nbsp;
 <i>8</i>&nbsp;    /**
-<i>9</i>&nbsp;     *
-<i>10</i>&nbsp;     * @param expression
-<i>11</i>&nbsp;     */
-<b class="fc"><i>12</i>&nbsp;    public PrintStatement(Expression expression) {</b>
-<b class="fc"><i>13</i>&nbsp;        if(expression == null)</b>
-<b class="nc"><i>14</i>&nbsp;            throw new IllegalArgumentException(&quot;[PrintStatement] value is null&quot;);</b>
-<b class="fc"><i>15</i>&nbsp;        this.expression = expression;</b>
-<b class="fc"><i>16</i>&nbsp;    }</b>
-<i>17</i>&nbsp;
-<i>18</i>&nbsp;    /**
-<i>19</i>&nbsp;     *
-<i>20</i>&nbsp;     */
-<i>21</i>&nbsp;    @Override
-<i>22</i>&nbsp;    public void evaluate()
-<i>23</i>&nbsp;    {
-<b class="fc"><i>24</i>&nbsp;        System.out.println(&quot;[Print Statement] &quot; + expression.evaluate());</b>
-<b class="fc"><i>25</i>&nbsp;    }</b>
-<i>26</i>&nbsp;}
+<i>9</i>&nbsp;     * @param expression -
+<i>10</i>&nbsp;     */
+<b class="fc"><i>11</i>&nbsp;    public PrintStatement(Expression expression) {</b>
+<b class="fc"><i>12</i>&nbsp;        if (expression == null)</b>
+<b class="nc"><i>13</i>&nbsp;            throw new IllegalArgumentException(&quot;[PrintStatement] value is null&quot;);</b>
+<b class="fc"><i>14</i>&nbsp;        this.expression = expression;</b>
+<b class="fc"><i>15</i>&nbsp;    }</b>
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;    /**
+<i>18</i>&nbsp;     *
+<i>19</i>&nbsp;     */
+<i>20</i>&nbsp;    @Override
+<i>21</i>&nbsp;    public void evaluate() {
+<b class="fc"><i>22</i>&nbsp;        System.out.println(&quot;[Print Statement] &quot; + expression.evaluate());</b>
+<b class="fc"><i>23</i>&nbsp;    }</b>
+<i>24</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2014-09-29 08:49</div>
+    <div style="float:right;">generated on 2014-09-30 12:46</div>
 </div>
 </body>
 </html>

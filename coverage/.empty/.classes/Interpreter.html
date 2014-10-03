@@ -75,33 +75,35 @@
 <div class="sourceCode"><i>1</i>&nbsp;import java.io.FileNotFoundException;
 <i>2</i>&nbsp;
 <i>3</i>&nbsp;/**
-<i>4</i>&nbsp; *
+<i>4</i>&nbsp; * The Interpreter class
 <i>5</i>&nbsp; */
 <b class="nc"><i>6</i>&nbsp;public class Interpreter {</b>
 <i>7</i>&nbsp;
 <i>8</i>&nbsp;    /**
-<i>9</i>&nbsp;     * @param args Command line arguments
+<i>9</i>&nbsp;     * @param args command line arguments must not be null.
 <i>10</i>&nbsp;     */
 <i>11</i>&nbsp;    public static void main(String[] args) {
 <i>12</i>&nbsp;        try {
-<b class="fc"><i>13</i>&nbsp;            Parser p = new Parser(System.getProperty(&quot;user.dir&quot;) + &quot;/test_data/test3.e&quot;);</b>
-<b class="fc"><i>14</i>&nbsp;            p.execute();</b>
-<b class="fc"><i>15</i>&nbsp;            Memory.displayMemory();</b>
-<b class="nc"><i>16</i>&nbsp;        } catch (ParserException e) {</b>
-<b class="nc"><i>17</i>&nbsp;            e.printStackTrace();</b>
-<b class="nc"><i>18</i>&nbsp;        } catch (FileNotFoundException e) {</b>
-<b class="nc"><i>19</i>&nbsp;            e.printStackTrace();</b>
-<b class="nc"><i>20</i>&nbsp;        } catch (LexicalException e) {</b>
-<b class="nc"><i>21</i>&nbsp;            e.printStackTrace();</b>
-<b class="fc"><i>22</i>&nbsp;        }</b>
-<b class="fc"><i>23</i>&nbsp;    }</b>
-<i>24</i>&nbsp;}
+<i>13</i>&nbsp;//            if (args.length == 0)
+<i>14</i>&nbsp;//                throw new IllegalArgumentException(&quot;[CLI] Usage: &#39;java -jar &lt;file location&gt;&#39;&quot;);
+<b class="fc"><i>15</i>&nbsp;            Parser p = new Parser(System.getProperty(&quot;user.dir&quot;) + &quot;/test_data/test1.e&quot;);</b>
+<b class="fc"><i>16</i>&nbsp;            p.execute();</b>
+<b class="fc"><i>17</i>&nbsp;            Memory.displayMemory();</b>
+<b class="nc"><i>18</i>&nbsp;        } catch (ParserException e) {</b>
+<b class="nc"><i>19</i>&nbsp;            System.out.println(&quot;[Parser Exception] &quot; + e.toString());</b>
+<b class="nc"><i>20</i>&nbsp;        } catch (FileNotFoundException e) {</b>
+<b class="nc"><i>21</i>&nbsp;            System.out.println(&quot;[File not found] &quot; + e.toString());</b>
+<b class="nc"><i>22</i>&nbsp;        } catch (LexicalException e) {</b>
+<b class="nc"><i>23</i>&nbsp;            System.out.println(&quot;[Lexical Exception] &quot; + e.toString());</b>
+<b class="fc"><i>24</i>&nbsp;        }</b>
+<b class="fc"><i>25</i>&nbsp;    }</b>
+<i>26</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2014-09-29 08:49</div>
+    <div style="float:right;">generated on 2014-09-30 12:46</div>
 </div>
 </body>
 </html>

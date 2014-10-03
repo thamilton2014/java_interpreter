@@ -1,7 +1,7 @@
 import java.util.List;
 
 /**
- * The CodeBlock class obtains a list of statements to execute.
+ * The CodeBlock class
  */
 public class CodeBlock {
 

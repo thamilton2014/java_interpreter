@@ -73,35 +73,34 @@
 
 
 <div class="sourceCode"><i>1</i>&nbsp;/**
-<i>2</i>&nbsp; *
+<i>2</i>&nbsp; * The Program class
 <i>3</i>&nbsp; */
 <i>4</i>&nbsp;public class Program {
-<i>5</i>&nbsp;    
-<i>6</i>&nbsp;    CodeBlock codeBlock;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;    private CodeBlock codeBlock;
 <i>7</i>&nbsp;
 <i>8</i>&nbsp;    /**
-<i>9</i>&nbsp;     *
-<i>10</i>&nbsp;     * @param codeBlock
-<i>11</i>&nbsp;     */
-<b class="fc"><i>12</i>&nbsp;    public Program(CodeBlock codeBlock) {</b>
-<b class="fc"><i>13</i>&nbsp;        if(codeBlock == null)</b>
-<b class="nc"><i>14</i>&nbsp;            throw new IllegalArgumentException(&quot;[Program] codeBlock is null.&quot;);</b>
-<b class="fc"><i>15</i>&nbsp;        this.codeBlock = codeBlock;</b>
-<b class="fc"><i>16</i>&nbsp;    }</b>
-<i>17</i>&nbsp;
-<i>18</i>&nbsp;    /**
-<i>19</i>&nbsp;     *
-<i>20</i>&nbsp;     */
-<i>21</i>&nbsp;    public void evaluate() {
-<b class="fc"><i>22</i>&nbsp;        codeBlock.evaluate();</b>
-<b class="fc"><i>23</i>&nbsp;    }</b>
-<i>24</i>&nbsp;}
+<i>9</i>&nbsp;     * @param codeBlock -
+<i>10</i>&nbsp;     */
+<b class="fc"><i>11</i>&nbsp;    public Program(CodeBlock codeBlock) {</b>
+<b class="fc"><i>12</i>&nbsp;        if (codeBlock == null)</b>
+<b class="nc"><i>13</i>&nbsp;            throw new IllegalArgumentException(&quot;[Program] codeBlock is null.&quot;);</b>
+<b class="fc"><i>14</i>&nbsp;        this.codeBlock = codeBlock;</b>
+<b class="fc"><i>15</i>&nbsp;    }</b>
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;    /**
+<i>18</i>&nbsp;     *
+<i>19</i>&nbsp;     */
+<i>20</i>&nbsp;    public void evaluate() {
+<b class="fc"><i>21</i>&nbsp;        codeBlock.evaluate();</b>
+<b class="fc"><i>22</i>&nbsp;    }</b>
+<i>23</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2014-09-29 08:49</div>
+    <div style="float:right;">generated on 2014-09-30 12:46</div>
 </div>
 </body>
 </html>

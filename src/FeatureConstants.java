@@ -1,5 +1,5 @@
 /**
- * Created by thamilton on 9/29/14.
+ * The FeatureConstants class
  */
 public interface FeatureConstants {
 

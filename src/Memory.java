@@ -1,5 +1,5 @@
 /**
- * The Memory class is used to determine the size of information use during program execution.
+ * The Memory class
  */
 public class Memory {
 

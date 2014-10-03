@@ -1,5 +1,5 @@
 /**
- * The LoopStatement class is used to traverse the code block statements and execute the appropriate statements.
+ * The LoopStatement class
  */
 public class LoopStatement implements Statement {
 

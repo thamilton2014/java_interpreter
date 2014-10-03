@@ -1,6 +1,5 @@
 /**
- * The BinaryExpression class is used to determine the whether the arithmetic tokens were obtained and to execute
- * the appropriate algorithm for that token.
+ * The BinaryExpression class
  */
 public class BinaryExpression implements Expression
 {

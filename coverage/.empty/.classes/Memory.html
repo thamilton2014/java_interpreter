@@ -73,62 +73,55 @@
 
 
 <div class="sourceCode"><i>1</i>&nbsp;/**
-<i>2</i>&nbsp; *
+<i>2</i>&nbsp; * The Memory class
 <i>3</i>&nbsp; */
-<b class="nc"><i>4</i>&nbsp;public class Memory</b>
-<i>5</i>&nbsp;{
-<i>6</i>&nbsp;
-<i>7</i>&nbsp;//	private static int[] mem = {0,0,0};
-<b class="fc"><i>8</i>&nbsp;    private static int[] mem = new int[60];</b>
-<i>9</i>&nbsp;
-<i>10</i>&nbsp;
-<i>11</i>&nbsp;	/**
-<i>12</i>&nbsp;	 * @param ch - must be a valid identifier
-<i>13</i>&nbsp;	 * @return value of ch
-<i>14</i>&nbsp;	 * @throws IllegalArgumentException if ch is not a valid identifier
-<i>15</i>&nbsp;	 */
-<i>16</i>&nbsp;	public static int fetch (char ch)
-<i>17</i>&nbsp;	{
-<b class="fc"><i>18</i>&nbsp;		return mem[getIndex(ch)];</b>
-<i>19</i>&nbsp;	}
-<i>20</i>&nbsp;
-<i>21</i>&nbsp;	/**
-<i>22</i>&nbsp;	 * @param ch - must be a valid identifier
-<i>23</i>&nbsp;	 * @param value
-<i>24</i>&nbsp;	 * @throws IllegalArgumentException if ch is not a valid identifier
-<i>25</i>&nbsp;	 */
-<i>26</i>&nbsp;	public static void store (char ch, int value)
-<i>27</i>&nbsp;	{
-<b class="fc"><i>28</i>&nbsp;		mem[getIndex(ch)] = value;</b>
-<b class="fc"><i>29</i>&nbsp;	}</b>
-<i>30</i>&nbsp;
-<i>31</i>&nbsp;    /**
-<i>32</i>&nbsp;     *
-<i>33</i>&nbsp;     * @param ch
-<i>34</i>&nbsp;     * @return
-<i>35</i>&nbsp;     */
-<i>36</i>&nbsp;	private static int getIndex (char ch)
-<i>37</i>&nbsp;	{
-<b class="fc"><i>38</i>&nbsp;		if (!LexicalAnalyzer.isValidIdentifier(ch))</b>
-<b class="nc"><i>39</i>&nbsp;			throw new IllegalArgumentException (ch + &quot; is not a valid identifier&quot;);</b>
-<b class="fc"><i>40</i>&nbsp;		return ch - &#39;A&#39;;</b>
-<i>41</i>&nbsp;	}
-<i>42</i>&nbsp;
-<i>43</i>&nbsp;    /**
-<i>44</i>&nbsp;     *
-<i>45</i>&nbsp;     */
-<i>46</i>&nbsp;	public static void displayMemory()
-<i>47</i>&nbsp;	{
-<b class="fc"><i>48</i>&nbsp;		for (int i = 0; i &lt; mem.length; i++)</b>
-<b class="fc"><i>49</i>&nbsp;			System.out.println (&quot;[Memory] &quot; + (char)(&#39;A&#39; + i) + &quot;: &quot; + mem[i]);</b>
-<b class="fc"><i>50</i>&nbsp;	}</b>
-<i>51</i>&nbsp;}
+<b class="nc"><i>4</i>&nbsp;public class Memory {</b>
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;    //	private static int[] mem = {0,0,0};
+<b class="fc"><i>7</i>&nbsp;    final private static int[] mem = new int[32];</b>
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;    /**
+<i>10</i>&nbsp;     * @param ch - must be a valid identifier
+<i>11</i>&nbsp;     * @return value of ch
+<i>12</i>&nbsp;     * @throws IllegalArgumentException if ch is not a valid identifier
+<i>13</i>&nbsp;     */
+<i>14</i>&nbsp;    public static int fetch(char ch) {
+<b class="fc"><i>15</i>&nbsp;        return mem[getIndex(ch)];</b>
+<i>16</i>&nbsp;    }
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;    /**
+<i>19</i>&nbsp;     * @param ch    - must be a valid identifier
+<i>20</i>&nbsp;     * @param value -
+<i>21</i>&nbsp;     * @throws IllegalArgumentException if ch is not a valid identifier
+<i>22</i>&nbsp;     */
+<i>23</i>&nbsp;    public static void store(char ch, int value) {
+<b class="fc"><i>24</i>&nbsp;        mem[getIndex(ch)] = value;</b>
+<b class="fc"><i>25</i>&nbsp;    }</b>
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    /**
+<i>28</i>&nbsp;     * @param ch -
+<i>29</i>&nbsp;     * @return ch - &#39;A&#39;
+<i>30</i>&nbsp;     */
+<i>31</i>&nbsp;    private static int getIndex(char ch) {
+<b class="fc"><i>32</i>&nbsp;        if (!LexicalAnalyzer.isValidIdentifier(ch))</b>
+<b class="nc"><i>33</i>&nbsp;            throw new IllegalArgumentException(ch + &quot; is not a valid identifier&quot;);</b>
+<b class="fc"><i>34</i>&nbsp;        return ch - &#39;A&#39;;</b>
+<i>35</i>&nbsp;    }
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;    /**
+<i>38</i>&nbsp;     *
+<i>39</i>&nbsp;     */
+<i>40</i>&nbsp;    public static void displayMemory() {
+<b class="fc"><i>41</i>&nbsp;        for (int i = 0; i &lt; mem.length; i++)</b>
+<b class="fc"><i>42</i>&nbsp;            System.out.println(&quot;[Memory] &quot; + (char) (&#39;A&#39; + i) + &quot;: &quot; + mem[i]);</b>
+<b class="fc"><i>43</i>&nbsp;    }</b>
+<i>44</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2014-09-29 08:49</div>
+    <div style="float:right;">generated on 2014-09-30 12:46</div>
 </div>
 </body>
 </html>

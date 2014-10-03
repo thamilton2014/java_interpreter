@@ -1,6 +1,5 @@
 /**
- * The BooleanExpression class is used to determine the whether the boolean tokens were obtained and to execute
- * the comparison algorithm for that token.
+ * The BooleanExpression class
  */
 public class BooleanExpression implements Expression {
 

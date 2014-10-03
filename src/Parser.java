@@ -146,10 +146,10 @@ public class Parser {
         token = lex.getNextToken();
         match(token, TokenType.PRINT_TOK);
         token = lex.getNextToken();
-        match(token, TokenType.PARAN_TOK);
+        match(token, TokenType.LPARAN_TOK);
         expression = getExpression();
         token = lex.getNextToken();
-        match(token, TokenType.PARAN_TOK);
+        match(token, TokenType.RPARAN_TOK);
         return new PrintStatement(expression);
     }
 
@@ -220,7 +220,7 @@ public class Parser {
 
         tok = lex.getLookaheadToken();
         if (tok.getTokType() == TokenType.ADD_TOK
-                || tok.getTokType() == TokenType.MUL_TOK
+            || tok.getTokType() == TokenType.MUL_TOK
                 || tok.getTokType() == TokenType.DIV_TOK
                 || tok.getTokType() == TokenType.SUB_TOK)
             expr = getBinaryExpression();

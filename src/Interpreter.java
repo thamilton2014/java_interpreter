@@ -1,14 +1,12 @@
 import java.io.FileNotFoundException;
 
 /**
- * The Interpreter class specifically parses Eiffel the language and builds intermediate data structures. The data
- * structures are then interpreted to allow execution of the program. Tokens in the Eiffel language should be
- * separated by whitespace.
+ * The Interpreter class
  */
 public class Interpreter {
 
     /**
-     * @param args Command line arguments
+     * @param args command line arguments must not be null.
      */
     public static void main(String[] args) {
         try {

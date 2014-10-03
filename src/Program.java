@@ -1,5 +1,5 @@
 /**
- * The Program class is used to generate the code block.
+ * The Program class
  */
 public class Program {
 

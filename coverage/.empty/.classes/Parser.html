@@ -39,18 +39,18 @@
   <td class="name">Parser</td>
 <td class="coverageStat">
   <span class="percent">
-    93.8%
+    75%
   </span>
   <span class="absValue">
-    (15/ 16)
+    (12/ 16)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    68%
+    45%
   </span>
   <span class="absValue">
-    (85/ 125)
+    (58/ 129)
   </span>
 </td>
 </tr>
@@ -77,18 +77,18 @@
   <td class="name"><strong>total</strong></td>
 <td class="coverageStat">
   <span class="percent">
-    94.1%
+    76.5%
   </span>
   <span class="absValue">
-    (16/ 17)
+    (13/ 17)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    68.3%
+    45.4%
   </span>
   <span class="absValue">
-    (86/ 126)
+    (59/ 130)
   </span>
 </td>
 </tr>
@@ -103,14 +103,14 @@
 <i>3</i>&nbsp;import java.util.List;
 <i>4</i>&nbsp;
 <i>5</i>&nbsp;/**
-<i>6</i>&nbsp; * Detects any syntactical or semantic errors.
+<i>6</i>&nbsp; * The Parsing class should detect any syntactical or semantic errors.
 <i>7</i>&nbsp; */
 <i>8</i>&nbsp;public class Parser {
 <i>9</i>&nbsp;
 <i>10</i>&nbsp;    private LexicalAnalyzer lex;
 <i>11</i>&nbsp;
 <i>12</i>&nbsp;    /**
-<i>13</i>&nbsp;     * @param fileName File
+<i>13</i>&nbsp;     * @param fileName -
 <i>14</i>&nbsp;     * @throws FileNotFoundException
 <i>15</i>&nbsp;     * @throws LexicalException
 <i>16</i>&nbsp;     */
@@ -124,298 +124,326 @@
 <i>24</i>&nbsp;     */
 <i>25</i>&nbsp;    public void execute() throws LexicalException, ParserException {
 <i>26</i>&nbsp;        Program program;
-<b class="fc"><i>27</i>&nbsp;        while (lex.getLookaheadToken().getTokType() != TokenType.EOS_TOK) {</b>
-<b class="fc"><i>28</i>&nbsp;            program = getProgram();</b>
-<b class="fc"><i>29</i>&nbsp;            program.evaluate();</b>
-<i>30</i>&nbsp;        }
-<b class="fc"><i>31</i>&nbsp;    }</b>
-<i>32</i>&nbsp;
-<i>33</i>&nbsp;    /**
-<i>34</i>&nbsp;     * &lt;feature&gt; → feature &lt;id&gt; is do &lt;compound&gt; end
-<i>35</i>&nbsp;     *
-<i>36</i>&nbsp;     * @return program (Change to feature)
-<i>37</i>&nbsp;     * @throws LexicalException
-<i>38</i>&nbsp;     * @throws ParserException
-<i>39</i>&nbsp;     */
-<i>40</i>&nbsp;    private Program getProgram() throws LexicalException, ParserException {
-<i>41</i>&nbsp;        Program program;
-<b class="fc"><i>42</i>&nbsp;        Token featureToken = lex.getNextToken();</b>
-<b class="fc"><i>43</i>&nbsp;        match(featureToken, TokenType.FEATURE_TOK);</b>
-<b class="fc"><i>44</i>&nbsp;        getId();</b>
-<b class="fc"><i>45</i>&nbsp;        Token isToken = lex.getNextToken();</b>
-<b class="fc"><i>46</i>&nbsp;        match(isToken, TokenType.IS_TOK);</b>
-<b class="fc"><i>47</i>&nbsp;        Token doToken = lex.getNextToken();</b>
-<b class="fc"><i>48</i>&nbsp;        match(doToken, TokenType.DO_TOK);</b>
-<b class="fc"><i>49</i>&nbsp;        program = new Program(getCodeBlock());</b>
-<b class="fc"><i>50</i>&nbsp;        Token endToken = lex.getNextToken();</b>
-<b class="fc"><i>51</i>&nbsp;        match(endToken, TokenType.END_TOK);</b>
-<b class="fc"><i>52</i>&nbsp;        return program;</b>
-<i>53</i>&nbsp;    }
-<i>54</i>&nbsp;
-<i>55</i>&nbsp;    /**
-<i>56</i>&nbsp;     * &lt;compound&gt; → &lt;statement&gt; | &lt;compound&gt;  &lt;statement&gt;
-<i>57</i>&nbsp;     *
-<i>58</i>&nbsp;     * @return Statements list (change to compound)
-<i>59</i>&nbsp;     * @throws LexicalException
-<i>60</i>&nbsp;     * @throws ParserException
-<i>61</i>&nbsp;     */
-<i>62</i>&nbsp;    private CodeBlock getCodeBlock() throws LexicalException, ParserException {
-<b class="fc"><i>63</i>&nbsp;        return new CodeBlock(getStatementList());</b>
-<i>64</i>&nbsp;    }
-<i>65</i>&nbsp;
-<i>66</i>&nbsp;    /**
-<i>67</i>&nbsp;     * &lt;statement&gt; → &lt;assignment_statement&gt; | &lt;print_statement&gt; | &lt;if_statement&gt; | &lt;loop_statement&gt;
-<i>68</i>&nbsp;     * @return statementList
-<i>69</i>&nbsp;     * @throws LexicalException
-<i>70</i>&nbsp;     * @throws ParserException
-<i>71</i>&nbsp;     */
-<i>72</i>&nbsp;    private List&lt;Statement&gt; getStatementList() throws LexicalException, ParserException {
-<i>73</i>&nbsp;        List&lt;Statement&gt; statementList = new ArrayList&lt;Statement&gt;();
-<b class="fc"><i>74</i>&nbsp;        while (lex.getLookaheadToken().getTokType() == TokenType.PRINT_TOK</b>
-<b class="fc"><i>75</i>&nbsp;                || lex.getLookaheadToken().getTokType() == TokenType.ID_TOK</b>
-<i>76</i>&nbsp;                || lex.getLookaheadToken().getTokType() == TokenType.IF_TOK
-<i>77</i>&nbsp;                || lex.getLookaheadToken().getTokType() == TokenType.FROM_TOK)
-<i>78</i>&nbsp;            statementList.add(getStatement());
-<b class="fc"><i>79</i>&nbsp;        return statementList;</b>
-<b class="fc"><i>80</i>&nbsp;    }</b>
-<i>81</i>&nbsp;
-<i>82</i>&nbsp;    /**
-<i>83</i>&nbsp;     * @return statement
-<i>84</i>&nbsp;     * @throws LexicalException
-<i>85</i>&nbsp;     * @throws ParserException
-<i>86</i>&nbsp;     */
-<i>87</i>&nbsp;    private Statement getStatement() throws LexicalException, ParserException {
-<i>88</i>&nbsp;        Statement statement;
-<i>89</i>&nbsp;        Token token = lex.getLookaheadToken();
-<b class="fc"><i>90</i>&nbsp;        switch (token.getTokType()) {</b>
-<b class="fc"><i>91</i>&nbsp;            case ID_TOK:</b>
-<i>92</i>&nbsp;                statement = getAssignmentStatement();
-<b class="fc"><i>93</i>&nbsp;                break;</b>
-<b class="fc"><i>94</i>&nbsp;            case PRINT_TOK:</b>
-<i>95</i>&nbsp;                statement = getPrintStatement();
-<b class="fc"><i>96</i>&nbsp;                break;</b>
-<b class="fc"><i>97</i>&nbsp;            case IF_TOK:</b>
-<i>98</i>&nbsp;                statement = getIfStatement();
-<b class="nc"><i>99</i>&nbsp;                break;</b>
-<b class="nc"><i>100</i>&nbsp;            case FROM_TOK:</b>
-<i>101</i>&nbsp;                statement = getLoopStatement();
-<b class="fc"><i>102</i>&nbsp;                break;</b>
-<b class="fc"><i>103</i>&nbsp;            default:</b>
-<i>104</i>&nbsp;                throw new LexicalException(&quot;statement initializing lexeme expected, &quot; + token.getLexeme());
-<b class="nc"><i>105</i>&nbsp;        }</b>
-<i>106</i>&nbsp;        return statement;
-<b class="fc"><i>107</i>&nbsp;    }</b>
-<i>108</i>&nbsp;
-<i>109</i>&nbsp;    /**
-<i>110</i>&nbsp;     * &lt;assignment_statement&gt; → &lt;id&gt; assignment_operator &lt;expression&gt;
-<i>111</i>&nbsp;     * @return Assignment
-<i>112</i>&nbsp;     * @throws LexicalException
-<i>113</i>&nbsp;     * @throws ParserException
-<i>114</i>&nbsp;     */
-<i>115</i>&nbsp;    private Assignment getAssignmentStatement() throws LexicalException, ParserException {
-<i>116</i>&nbsp;        Id var = getId();
-<b class="fc"><i>117</i>&nbsp;        Token assignToken = lex.getNextToken();</b>
-<b class="fc"><i>118</i>&nbsp;        match(assignToken, TokenType.ASSIGN_TOK);</b>
-<b class="fc"><i>119</i>&nbsp;        return new Assignment(var, getExpression());</b>
-<b class="fc"><i>120</i>&nbsp;    }</b>
-<i>121</i>&nbsp;
-<i>122</i>&nbsp;    /**
-<i>123</i>&nbsp;     * &lt;print_statement&gt; → print  ( &lt;expression&gt;  )
-<i>124</i>&nbsp;     * @return PrintStatement
-<i>125</i>&nbsp;     * @throws ParserException
-<i>126</i>&nbsp;     * @throws LexicalException
-<i>127</i>&nbsp;     */
-<i>128</i>&nbsp;    private PrintStatement getPrintStatement() throws ParserException, LexicalException {
-<i>129</i>&nbsp;        Expression expression;
-<b class="fc"><i>130</i>&nbsp;        Token token = lex.getNextToken();</b>
-<b class="fc"><i>131</i>&nbsp;        match(token, TokenType.PRINT_TOK);</b>
-<b class="fc"><i>132</i>&nbsp;        token = lex.getNextToken();</b>
-<i>133</i>&nbsp;        match(token, TokenType.PARAN_TOK);
-<i>134</i>&nbsp;        expression = getExpression();
-<i>135</i>&nbsp;        token = lex.getNextToken();
-<i>136</i>&nbsp;        match(token, TokenType.PARAN_TOK);
-<i>137</i>&nbsp;        return new PrintStatement(expression);
-<i>138</i>&nbsp;    }
-<i>139</i>&nbsp;
-<i>140</i>&nbsp;    /**
-<i>141</i>&nbsp;     * @return If_Statement
-<i>142</i>&nbsp;     * @throws LexicalException
-<i>143</i>&nbsp;     * @throws ParserException
-<i>144</i>&nbsp;     */
-<b class="nc"><i>145</i>&nbsp;    private If_Statement getIfStatement() throws LexicalException, ParserException {</b>
-<b class="nc"><i>146</i>&nbsp;        BooleanExpression booleanExpression;</b>
-<b class="nc"><i>147</i>&nbsp;        CodeBlock codeBlock1;</b>
-<b class="nc"><i>148</i>&nbsp;        CodeBlock codeBlock2;</b>
-<b class="nc"><i>149</i>&nbsp;        Token token;</b>
-<b class="nc"><i>150</i>&nbsp;        token = lex.getNextToken();</b>
-<b class="nc"><i>151</i>&nbsp;        match(token, TokenType.IF_TOK);</b>
-<b class="nc"><i>152</i>&nbsp;        booleanExpression = getBooleanExpression();</b>
-<b class="nc"><i>153</i>&nbsp;        token = lex.getNextToken();</b>
-<b class="nc"><i>154</i>&nbsp;        match(token, TokenType.THEN_TOK);</b>
-<b class="nc"><i>155</i>&nbsp;        codeBlock1 = getCodeBlock();</b>
-<b class="nc"><i>156</i>&nbsp;        token = lex.getNextToken();</b>
-<i>157</i>&nbsp;        match(token, TokenType.ELSE_TOK);
-<i>158</i>&nbsp;        codeBlock2 = getCodeBlock();
-<i>159</i>&nbsp;        token = lex.getNextToken();
-<i>160</i>&nbsp;        match(token, TokenType.END_TOK);
-<i>161</i>&nbsp;        return new If_Statement(booleanExpression, codeBlock1, codeBlock2);
-<i>162</i>&nbsp;    }
-<i>163</i>&nbsp;
-<i>164</i>&nbsp;    /**
-<i>165</i>&nbsp;     * &lt;loop_statement&gt; → from &lt;assignment_statement&gt; until &lt;boolean_expression&gt; loop &lt;compound&gt; end
-<i>166</i>&nbsp;     * @return LoopStatement
-<i>167</i>&nbsp;     * @throws LexicalException
-<i>168</i>&nbsp;     * @throws ParserException
-<b class="fc"><i>169</i>&nbsp;     */</b>
-<b class="fc"><i>170</i>&nbsp;    private LoopStatement getLoopStatement() throws LexicalException, ParserException {</b>
-<b class="fc"><i>171</i>&nbsp;        Token token;</b>
-<b class="fc"><i>172</i>&nbsp;        BooleanExpression booleanExpression;</b>
-<b class="fc"><i>173</i>&nbsp;        CodeBlock codeBlock;</b>
-<b class="fc"><i>174</i>&nbsp;        token = lex.getNextToken();</b>
-<b class="fc"><i>175</i>&nbsp;        match(token, TokenType.FROM_TOK);</b>
-<b class="fc"><i>176</i>&nbsp;        getAssignmentStatement();</b>
-<b class="fc"><i>177</i>&nbsp;        token = lex.getNextToken();</b>
-<b class="fc"><i>178</i>&nbsp;        match(token, TokenType.UNTIL_TOK);</b>
-<b class="fc"><i>179</i>&nbsp;        booleanExpression = getBooleanExpression();</b>
-<b class="fc"><i>180</i>&nbsp;        token = lex.getNextToken();</b>
-<i>181</i>&nbsp;        match(token, TokenType.LOOP_TOK);
-<i>182</i>&nbsp;        codeBlock = getCodeBlock();
-<i>183</i>&nbsp;        token = lex.getNextToken();
-<i>184</i>&nbsp;        match(token, TokenType.END_TOK);
-<i>185</i>&nbsp;        return new LoopStatement(booleanExpression, codeBlock);
-<i>186</i>&nbsp;    }
-<i>187</i>&nbsp;
-<i>188</i>&nbsp;    /**
-<i>189</i>&nbsp;     * &lt;expression&gt; → &lt;arithmetic_operator&gt; &lt;expression&gt; &lt;expression&gt; | &lt;id&gt; | literal_integer
-<i>190</i>&nbsp;     * @return expr
-<b class="fc"><i>191</i>&nbsp;     * @throws ParserException</b>
-<b class="fc"><i>192</i>&nbsp;     * @throws LexicalException</b>
-<i>193</i>&nbsp;     */
-<i>194</i>&nbsp;    private Expression getExpression() throws ParserException, LexicalException {
-<i>195</i>&nbsp;        Expression expr;
-<b class="fc"><i>196</i>&nbsp;        Token tok = lex.getLookaheadToken();</b>
-<b class="fc"><i>197</i>&nbsp;        if (tok.getTokType() == TokenType.ADD_TOK</b>
-<i>198</i>&nbsp;                || tok.getTokType() == TokenType.MUL_TOK
-<i>199</i>&nbsp;                || tok.getTokType() == TokenType.DIV_TOK
-<i>200</i>&nbsp;                || tok.getTokType() == TokenType.SUB_TOK)
-<i>201</i>&nbsp;            expr = getBinaryExpression();
-<i>202</i>&nbsp;        else if (tok.getTokType() == TokenType.GT_TOK
-<b class="nc"><i>203</i>&nbsp;                || tok.getTokType() == TokenType.GE_TOK</b>
-<b class="fc"><i>204</i>&nbsp;                || tok.getTokType() == TokenType.LE_TOK</b>
-<b class="fc"><i>205</i>&nbsp;                || tok.getTokType() == TokenType.LT_TOK</b>
-<i>206</i>&nbsp;                || tok.getTokType() == TokenType.NE_TOK
-<b class="fc"><i>207</i>&nbsp;                || tok.getTokType() == TokenType.EQ_TOK) {</b>
-<b class="fc"><i>208</i>&nbsp;            expr = getBooleanExpression();</b>
-<i>209</i>&nbsp;        } else if (tok.getTokType() == TokenType.ID_TOK)
-<i>210</i>&nbsp;            expr = getId();
-<i>211</i>&nbsp;        else
-<i>212</i>&nbsp;            expr = getConstant();
-<i>213</i>&nbsp;        return expr;
-<i>214</i>&nbsp;    }
-<i>215</i>&nbsp;
-<i>216</i>&nbsp;    /**
-<i>217</i>&nbsp;     * @return BinaryExpression(op, expr1, expr2);
-<b class="fc"><i>218</i>&nbsp;     * @throws ParserException</b>
-<b class="fc"><i>219</i>&nbsp;     * @throws LexicalException</b>
-<b class="fc"><i>220</i>&nbsp;     */</b>
-<b class="fc"><i>221</i>&nbsp;    private Expression getBinaryExpression() throws ParserException, LexicalException {</b>
-<b class="nc"><i>222</i>&nbsp;        ArithmeticOperator op;</b>
-<b class="nc"><i>223</i>&nbsp;        Token tok = lex.getNextToken();</b>
-<b class="nc"><i>224</i>&nbsp;        if (tok.getTokType() == TokenType.ADD_TOK) {</b>
-<b class="nc"><i>225</i>&nbsp;            match(tok, TokenType.ADD_TOK);</b>
-<b class="nc"><i>226</i>&nbsp;            op = ArithmeticOperator.ADD_OP;</b>
-<b class="nc"><i>227</i>&nbsp;        } else if (tok.getTokType() == TokenType.MUL_TOK) {</b>
-<b class="nc"><i>228</i>&nbsp;            match(tok, TokenType.MUL_TOK);</b>
-<b class="nc"><i>229</i>&nbsp;            op = ArithmeticOperator.MUL_OP;</b>
-<b class="nc"><i>230</i>&nbsp;        } else if (tok.getTokType() == TokenType.SUB_TOK) {</b>
-<i>231</i>&nbsp;            match(tok, TokenType.SUB_TOK);
-<b class="nc"><i>232</i>&nbsp;            op = ArithmeticOperator.SUB_OP;</b>
-<i>233</i>&nbsp;        } else if (tok.getTokType() == TokenType.DIV_TOK) {
-<b class="fc"><i>234</i>&nbsp;            match(tok, TokenType.DIV_TOK);</b>
-<b class="fc"><i>235</i>&nbsp;            op = ArithmeticOperator.DIV_OP;</b>
-<b class="fc"><i>236</i>&nbsp;        } else</b>
-<i>237</i>&nbsp;            throw new ParserException(&quot; operator expected at row &quot; +
-<i>238</i>&nbsp;                    tok.getRowNumber() + &quot; and column &quot; + tok.getColumnNumber());
-<i>239</i>&nbsp;        Expression expr1 = getExpression();
-<i>240</i>&nbsp;        Expression expr2 = getExpression();
-<i>241</i>&nbsp;        return new BinaryExpression(op, expr1, expr2);
-<i>242</i>&nbsp;    }
-<i>243</i>&nbsp;
-<i>244</i>&nbsp;    /**
-<i>245</i>&nbsp;     * &lt;boolean_expression&gt; → &lt;relational_operator&gt; &lt;expression&gt; &lt;expression&gt;
-<i>246</i>&nbsp;     * @return BooleanExpression
-<b class="fc"><i>247</i>&nbsp;     * @throws LexicalException</b>
-<b class="fc"><i>248</i>&nbsp;     * @throws ParserException</b>
-<b class="nc"><i>249</i>&nbsp;     */</b>
-<b class="nc"><i>250</i>&nbsp;    private BooleanExpression getBooleanExpression() throws LexicalException, ParserException {</b>
-<b class="fc"><i>251</i>&nbsp;        RelationalOperator op;</b>
-<b class="nc"><i>252</i>&nbsp;        Token token = lex.getNextToken();</b>
-<b class="nc"><i>253</i>&nbsp;        if (token.getTokType() == TokenType.LE_TOK) {</b>
-<b class="fc"><i>254</i>&nbsp;            match(token, TokenType.LE_TOK);</b>
-<b class="nc"><i>255</i>&nbsp;            op = RelationalOperator.LE_OP;</b>
-<b class="nc"><i>256</i>&nbsp;        } else if (token.getTokType() == TokenType.LT_TOK) {</b>
-<b class="fc"><i>257</i>&nbsp;            match(token, TokenType.LT_TOK);</b>
-<b class="fc"><i>258</i>&nbsp;            op = RelationalOperator.LT_OP;</b>
-<b class="fc"><i>259</i>&nbsp;        } else if (token.getTokType() == TokenType.GE_TOK) {</b>
-<b class="nc"><i>260</i>&nbsp;            match(token, TokenType.GE_TOK);</b>
-<b class="nc"><i>261</i>&nbsp;            op = RelationalOperator.GE_OP;</b>
-<b class="nc"><i>262</i>&nbsp;        } else if (token.getTokType() == TokenType.GT_TOK) {</b>
-<b class="nc"><i>263</i>&nbsp;            match(token, TokenType.GT_TOK);</b>
-<b class="nc"><i>264</i>&nbsp;            op = RelationalOperator.GT_OP;</b>
-<b class="nc"><i>265</i>&nbsp;        } else if (token.getTokType() == TokenType.EQ_TOK) {</b>
-<i>266</i>&nbsp;            match(token, TokenType.EQ_TOK);
-<b class="nc"><i>267</i>&nbsp;            op = RelationalOperator.EQ_OP;</b>
-<i>268</i>&nbsp;        } else if (token.getTokType() == TokenType.NE_TOK) {
-<b class="fc"><i>269</i>&nbsp;            match(token, TokenType.NE_TOK);</b>
-<b class="fc"><i>270</i>&nbsp;            op = RelationalOperator.NE_TOK;</b>
-<b class="fc"><i>271</i>&nbsp;        } else</b>
-<i>272</i>&nbsp;            throw new ParserException(&quot; operator expected at row &quot; +
-<i>273</i>&nbsp;                    token.getRowNumber() + &quot; and column &quot; + token.getColumnNumber());
-<i>274</i>&nbsp;        Expression expression1 = getExpression();
-<i>275</i>&nbsp;        Expression expression2 = getExpression();
-<i>276</i>&nbsp;        return new BooleanExpression(op, expression1, expression2);
-<i>277</i>&nbsp;    }
-<i>278</i>&nbsp;
-<i>279</i>&nbsp;    /**
-<b class="fc"><i>280</i>&nbsp;     * @return Id</b>
-<b class="fc"><i>281</i>&nbsp;     * @throws LexicalException</b>
-<b class="fc"><i>282</i>&nbsp;     * @throws ParserException</b>
-<i>283</i>&nbsp;     */
-<i>284</i>&nbsp;    private Id getId() throws LexicalException, ParserException {
-<i>285</i>&nbsp;        Token token = lex.getNextToken();
-<i>286</i>&nbsp;        match(token, TokenType.ID_TOK);
-<i>287</i>&nbsp;        return new Id(token.getLexeme().charAt(0));
-<i>288</i>&nbsp;    }
-<i>289</i>&nbsp;
-<i>290</i>&nbsp;    /**
-<b class="fc"><i>291</i>&nbsp;     * @return Constant</b>
-<b class="fc"><i>292</i>&nbsp;     * @throws ParserException</b>
-<b class="fc"><i>293</i>&nbsp;     * @throws LexicalException</b>
-<b class="fc"><i>294</i>&nbsp;     */</b>
-<i>295</i>&nbsp;    private Expression getConstant() throws ParserException, LexicalException {
-<i>296</i>&nbsp;        Token tok = lex.getNextToken();
-<i>297</i>&nbsp;        match(tok, TokenType.CONST_TOK);
-<i>298</i>&nbsp;        int value = Integer.parseInt(tok.getLexeme());
-<i>299</i>&nbsp;        return new Constant(value);
+<i>27</i>&nbsp;
+<b class="fc"><i>28</i>&nbsp;        while (lex.getLookaheadToken().getTokType() != TokenType.EOS_TOK) {</b>
+<b class="fc"><i>29</i>&nbsp;            program = getProgram();</b>
+<b class="fc"><i>30</i>&nbsp;            program.evaluate();</b>
+<i>31</i>&nbsp;        }
+<b class="fc"><i>32</i>&nbsp;    }</b>
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;    /**
+<i>35</i>&nbsp;     * &lt;feature&gt; -&gt; feature &lt;id&gt; is do &lt;compound&gt; end
+<i>36</i>&nbsp;     *
+<i>37</i>&nbsp;     * @return program (Change to feature)
+<i>38</i>&nbsp;     * @throws LexicalException
+<i>39</i>&nbsp;     * @throws ParserException
+<i>40</i>&nbsp;     */
+<i>41</i>&nbsp;    private Program getProgram() throws LexicalException, ParserException {
+<i>42</i>&nbsp;        Token token;
+<i>43</i>&nbsp;        Program program;
+<i>44</i>&nbsp;
+<b class="fc"><i>45</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="fc"><i>46</i>&nbsp;        match(token, TokenType.FEATURE_TOK);</b>
+<b class="fc"><i>47</i>&nbsp;        getId();</b>
+<b class="fc"><i>48</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="fc"><i>49</i>&nbsp;        match(token, TokenType.IS_TOK);</b>
+<b class="fc"><i>50</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="fc"><i>51</i>&nbsp;        match(token, TokenType.DO_TOK);</b>
+<b class="fc"><i>52</i>&nbsp;        program = new Program(getCodeBlock());</b>
+<b class="fc"><i>53</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="fc"><i>54</i>&nbsp;        match(token, TokenType.END_TOK);</b>
+<b class="fc"><i>55</i>&nbsp;        return program;</b>
+<i>56</i>&nbsp;    }
+<i>57</i>&nbsp;
+<i>58</i>&nbsp;    /**
+<i>59</i>&nbsp;     * &lt;compound&gt; -&gt; &lt;statement&gt; | &lt;compound&gt;  &lt;statement&gt;
+<i>60</i>&nbsp;     *
+<i>61</i>&nbsp;     * @return Statements list (change to compound)
+<i>62</i>&nbsp;     * @throws LexicalException
+<i>63</i>&nbsp;     * @throws ParserException
+<i>64</i>&nbsp;     */
+<i>65</i>&nbsp;    private CodeBlock getCodeBlock() throws LexicalException, ParserException {
+<b class="fc"><i>66</i>&nbsp;        return new CodeBlock(getStatementList());</b>
+<i>67</i>&nbsp;    }
+<i>68</i>&nbsp;
+<i>69</i>&nbsp;    /**
+<i>70</i>&nbsp;     * @return statementList
+<i>71</i>&nbsp;     * @throws LexicalException
+<i>72</i>&nbsp;     * @throws ParserException
+<i>73</i>&nbsp;     */
+<i>74</i>&nbsp;    private List&lt;Statement&gt; getStatementList() throws LexicalException, ParserException {
+<i>75</i>&nbsp;        List&lt;Statement&gt; statementList;
+<i>76</i>&nbsp;
+<b class="fc"><i>77</i>&nbsp;        statementList = new ArrayList&lt;Statement&gt;();</b>
+<b class="fc"><i>78</i>&nbsp;        while (lex.getLookaheadToken().getTokType() == TokenType.PRINT_TOK</b>
+<i>79</i>&nbsp;                || lex.getLookaheadToken().getTokType() == TokenType.ID_TOK
+<i>80</i>&nbsp;                || lex.getLookaheadToken().getTokType() == TokenType.IF_TOK
+<i>81</i>&nbsp;                || lex.getLookaheadToken().getTokType() == TokenType.FROM_TOK)
+<b class="fc"><i>82</i>&nbsp;            statementList.add(getStatement());</b>
+<b class="fc"><i>83</i>&nbsp;        return statementList;</b>
+<i>84</i>&nbsp;    }
+<i>85</i>&nbsp;
+<i>86</i>&nbsp;    /**
+<i>87</i>&nbsp;     * &lt;statement&gt; -&gt; &lt;assignment_statement&gt; | &lt;print_statement&gt; | &lt;if_statement&gt; | &lt;loop_statement&gt;
+<i>88</i>&nbsp;     *
+<i>89</i>&nbsp;     * @return statement
+<i>90</i>&nbsp;     * @throws LexicalException
+<i>91</i>&nbsp;     * @throws ParserException
+<i>92</i>&nbsp;     */
+<i>93</i>&nbsp;    private Statement getStatement() throws LexicalException, ParserException {
+<i>94</i>&nbsp;        Token token;
+<i>95</i>&nbsp;        Statement statement;
+<i>96</i>&nbsp;
+<b class="fc"><i>97</i>&nbsp;        token = lex.getLookaheadToken();</b>
+<b class="fc"><i>98</i>&nbsp;        switch (token.getTokType()) {</b>
+<i>99</i>&nbsp;            case ID_TOK:
+<b class="fc"><i>100</i>&nbsp;                statement = getAssignmentStatement();</b>
+<b class="fc"><i>101</i>&nbsp;                break;</b>
+<i>102</i>&nbsp;            case PRINT_TOK:
+<b class="fc"><i>103</i>&nbsp;                statement = getPrintStatement();</b>
+<b class="fc"><i>104</i>&nbsp;                break;</b>
+<i>105</i>&nbsp;            case IF_TOK:
+<b class="nc"><i>106</i>&nbsp;                statement = getIfStatement();</b>
+<b class="nc"><i>107</i>&nbsp;                break;</b>
+<i>108</i>&nbsp;            case FROM_TOK:
+<b class="nc"><i>109</i>&nbsp;                statement = getLoopStatement();</b>
+<b class="nc"><i>110</i>&nbsp;                break;</b>
+<i>111</i>&nbsp;            default:
+<b class="nc"><i>112</i>&nbsp;                throw new LexicalException(&quot;statement initializing lexeme expected, &quot; + token.getLexeme());</b>
+<i>113</i>&nbsp;        }
+<b class="fc"><i>114</i>&nbsp;        return statement;</b>
+<i>115</i>&nbsp;    }
+<i>116</i>&nbsp;
+<i>117</i>&nbsp;    /**
+<i>118</i>&nbsp;     * &lt;assignment_statement&gt; -&gt; &lt;id&gt; assignment_operator &lt;expression&gt;
+<i>119</i>&nbsp;     *
+<i>120</i>&nbsp;     * @return Assignment
+<i>121</i>&nbsp;     * @throws LexicalException
+<i>122</i>&nbsp;     * @throws ParserException
+<i>123</i>&nbsp;     */
+<i>124</i>&nbsp;    private Assignment getAssignmentStatement() throws LexicalException, ParserException {
+<i>125</i>&nbsp;        Token token;
+<b class="fc"><i>126</i>&nbsp;        Id var = getId();</b>
+<i>127</i>&nbsp;        Expression expression;
+<i>128</i>&nbsp;
+<b class="fc"><i>129</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="fc"><i>130</i>&nbsp;        match(token, TokenType.ASSIGN_TOK);</b>
+<b class="fc"><i>131</i>&nbsp;        expression = getExpression();</b>
+<b class="fc"><i>132</i>&nbsp;        return new Assignment(var, expression);</b>
+<i>133</i>&nbsp;    }
+<i>134</i>&nbsp;
+<i>135</i>&nbsp;    /**
+<i>136</i>&nbsp;     * &lt;print_statement&gt; -&gt; print  ( &lt;expression&gt;  )
+<i>137</i>&nbsp;     *
+<i>138</i>&nbsp;     * @return PrintStatement
+<i>139</i>&nbsp;     * @throws ParserException
+<i>140</i>&nbsp;     * @throws LexicalException
+<i>141</i>&nbsp;     */
+<i>142</i>&nbsp;    private PrintStatement getPrintStatement() throws ParserException, LexicalException {
+<i>143</i>&nbsp;        Token token;
+<i>144</i>&nbsp;        Expression expression;
+<i>145</i>&nbsp;
+<b class="fc"><i>146</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="fc"><i>147</i>&nbsp;        match(token, TokenType.PRINT_TOK);</b>
+<b class="fc"><i>148</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="fc"><i>149</i>&nbsp;        match(token, TokenType.PARAN_TOK);</b>
+<b class="fc"><i>150</i>&nbsp;        expression = getExpression();</b>
+<b class="fc"><i>151</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="fc"><i>152</i>&nbsp;        match(token, TokenType.PARAN_TOK);</b>
+<b class="fc"><i>153</i>&nbsp;        return new PrintStatement(expression);</b>
+<i>154</i>&nbsp;    }
+<i>155</i>&nbsp;
+<i>156</i>&nbsp;    /**
+<i>157</i>&nbsp;     * &lt;if_statement&gt; -&gt; if &lt;boolean_expression&gt; then &lt;compound&gt; else &lt;compound&gt; end
+<i>158</i>&nbsp;     *
+<i>159</i>&nbsp;     * @return If_Statement
+<i>160</i>&nbsp;     * @throws LexicalException
+<i>161</i>&nbsp;     * @throws ParserException
+<i>162</i>&nbsp;     */
+<i>163</i>&nbsp;    private If_Statement getIfStatement() throws LexicalException, ParserException {
+<i>164</i>&nbsp;        Token token;
+<i>165</i>&nbsp;        BooleanExpression booleanExpression;
+<i>166</i>&nbsp;        CodeBlock codeBlock1;
+<i>167</i>&nbsp;        CodeBlock codeBlock2;
+<i>168</i>&nbsp;
+<b class="nc"><i>169</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="nc"><i>170</i>&nbsp;        match(token, TokenType.IF_TOK);</b>
+<b class="nc"><i>171</i>&nbsp;        booleanExpression = getBooleanExpression();</b>
+<b class="nc"><i>172</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="nc"><i>173</i>&nbsp;        match(token, TokenType.THEN_TOK);</b>
+<b class="nc"><i>174</i>&nbsp;        codeBlock1 = getCodeBlock();</b>
+<b class="nc"><i>175</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="nc"><i>176</i>&nbsp;        match(token, TokenType.ELSE_TOK);</b>
+<b class="nc"><i>177</i>&nbsp;        codeBlock2 = getCodeBlock();</b>
+<b class="nc"><i>178</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="nc"><i>179</i>&nbsp;        match(token, TokenType.END_TOK);</b>
+<b class="nc"><i>180</i>&nbsp;        return new If_Statement(booleanExpression, codeBlock1, codeBlock2);</b>
+<i>181</i>&nbsp;    }
+<i>182</i>&nbsp;
+<i>183</i>&nbsp;    /**
+<i>184</i>&nbsp;     * &lt;loop_statement&gt; -&gt; from &lt;assignment_statement&gt; until &lt;boolean_expression&gt; loop &lt;compound&gt; end
+<i>185</i>&nbsp;     *
+<i>186</i>&nbsp;     * @return LoopStatement
+<i>187</i>&nbsp;     * @throws LexicalException
+<i>188</i>&nbsp;     * @throws ParserException
+<i>189</i>&nbsp;     */
+<i>190</i>&nbsp;    private LoopStatement getLoopStatement() throws LexicalException, ParserException {
+<i>191</i>&nbsp;        Token token;
+<i>192</i>&nbsp;        Assignment assignment;
+<i>193</i>&nbsp;        BooleanExpression booleanExpression;
+<i>194</i>&nbsp;        CodeBlock codeBlock;
+<i>195</i>&nbsp;
+<b class="nc"><i>196</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="nc"><i>197</i>&nbsp;        match(token, TokenType.FROM_TOK);</b>
+<b class="nc"><i>198</i>&nbsp;        assignment = getAssignmentStatement();</b>
+<b class="nc"><i>199</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="nc"><i>200</i>&nbsp;        match(token, TokenType.UNTIL_TOK);</b>
+<b class="nc"><i>201</i>&nbsp;        booleanExpression = getBooleanExpression();</b>
+<b class="nc"><i>202</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="nc"><i>203</i>&nbsp;        match(token, TokenType.LOOP_TOK);</b>
+<b class="nc"><i>204</i>&nbsp;        codeBlock = getCodeBlock();</b>
+<b class="nc"><i>205</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="nc"><i>206</i>&nbsp;        match(token, TokenType.END_TOK);</b>
+<b class="nc"><i>207</i>&nbsp;        return new LoopStatement(assignment, booleanExpression, codeBlock);</b>
+<i>208</i>&nbsp;    }
+<i>209</i>&nbsp;
+<i>210</i>&nbsp;    /**
+<i>211</i>&nbsp;     * &lt;expression&gt; -&gt; &lt;arithmetic_operator&gt; &lt;expression&gt; &lt;expression&gt; | &lt;id&gt; | literal_integer
+<i>212</i>&nbsp;     *
+<i>213</i>&nbsp;     * @return expr
+<i>214</i>&nbsp;     * @throws ParserException
+<i>215</i>&nbsp;     * @throws LexicalException
+<i>216</i>&nbsp;     */
+<i>217</i>&nbsp;    private Expression getExpression() throws ParserException, LexicalException {
+<i>218</i>&nbsp;        Token tok;
+<i>219</i>&nbsp;        Expression expr;
+<i>220</i>&nbsp;
+<b class="fc"><i>221</i>&nbsp;        tok = lex.getLookaheadToken();</b>
+<b class="fc"><i>222</i>&nbsp;        if (tok.getTokType() == TokenType.ADD_TOK</b>
+<i>223</i>&nbsp;                || tok.getTokType() == TokenType.MUL_TOK
+<i>224</i>&nbsp;                || tok.getTokType() == TokenType.DIV_TOK
+<i>225</i>&nbsp;                || tok.getTokType() == TokenType.SUB_TOK)
+<b class="nc"><i>226</i>&nbsp;            expr = getBinaryExpression();</b>
+<b class="fc"><i>227</i>&nbsp;        else if (tok.getTokType() == TokenType.ID_TOK)</b>
+<b class="fc"><i>228</i>&nbsp;            expr = getId();</b>
+<i>229</i>&nbsp;        else
+<b class="fc"><i>230</i>&nbsp;            expr = getConstant();</b>
+<b class="fc"><i>231</i>&nbsp;        return expr;</b>
+<i>232</i>&nbsp;    }
+<i>233</i>&nbsp;
+<i>234</i>&nbsp;    /**
+<i>235</i>&nbsp;     * @return BinaryExpression(op, expr1, expr2);
+<i>236</i>&nbsp;     * @throws ParserException
+<i>237</i>&nbsp;     * @throws LexicalException
+<i>238</i>&nbsp;     */
+<i>239</i>&nbsp;    private Expression getBinaryExpression() throws ParserException, LexicalException {
+<i>240</i>&nbsp;        Token tok;
+<i>241</i>&nbsp;        ArithmeticOperator op;
+<i>242</i>&nbsp;
+<b class="nc"><i>243</i>&nbsp;        tok = lex.getNextToken();</b>
+<b class="nc"><i>244</i>&nbsp;        if (tok.getTokType() == TokenType.ADD_TOK) {</b>
+<b class="nc"><i>245</i>&nbsp;            match(tok, TokenType.ADD_TOK);</b>
+<b class="nc"><i>246</i>&nbsp;            op = ArithmeticOperator.ADD_OP;</b>
+<b class="nc"><i>247</i>&nbsp;        } else if (tok.getTokType() == TokenType.MUL_TOK) {</b>
+<b class="nc"><i>248</i>&nbsp;            match(tok, TokenType.MUL_TOK);</b>
+<b class="nc"><i>249</i>&nbsp;            op = ArithmeticOperator.MUL_OP;</b>
+<b class="nc"><i>250</i>&nbsp;        } else if (tok.getTokType() == TokenType.SUB_TOK) {</b>
+<b class="nc"><i>251</i>&nbsp;            match(tok, TokenType.SUB_TOK);</b>
+<b class="nc"><i>252</i>&nbsp;            op = ArithmeticOperator.SUB_OP;</b>
+<b class="nc"><i>253</i>&nbsp;        } else if (tok.getTokType() == TokenType.DIV_TOK) {</b>
+<b class="nc"><i>254</i>&nbsp;            match(tok, TokenType.DIV_TOK);</b>
+<b class="nc"><i>255</i>&nbsp;            op = ArithmeticOperator.DIV_OP;</b>
+<i>256</i>&nbsp;        } else
+<b class="nc"><i>257</i>&nbsp;            throw new ParserException(&quot; operator expected at row &quot; +</b>
+<i>258</i>&nbsp;                    tok.getRowNumber() + &quot; and column &quot; + tok.getColumnNumber());
+<b class="nc"><i>259</i>&nbsp;        Expression expr1 = getExpression();</b>
+<b class="nc"><i>260</i>&nbsp;        Expression expr2 = getExpression();</b>
+<b class="nc"><i>261</i>&nbsp;        return new BinaryExpression(op, expr1, expr2);</b>
+<i>262</i>&nbsp;    }
+<i>263</i>&nbsp;
+<i>264</i>&nbsp;    /**
+<i>265</i>&nbsp;     * &lt;boolean_expression&gt; → &lt;relational_operator&gt; &lt;expression&gt; &lt;expression&gt;
+<i>266</i>&nbsp;     *
+<i>267</i>&nbsp;     * @return BooleanExpression
+<i>268</i>&nbsp;     * @throws LexicalException
+<i>269</i>&nbsp;     * @throws ParserException
+<i>270</i>&nbsp;     */
+<i>271</i>&nbsp;    private BooleanExpression getBooleanExpression() throws LexicalException, ParserException {
+<i>272</i>&nbsp;        Token token;
+<i>273</i>&nbsp;        RelationalOperator op;
+<i>274</i>&nbsp;
+<b class="nc"><i>275</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="nc"><i>276</i>&nbsp;        if (token.getTokType() == TokenType.LE_TOK) {</b>
+<b class="nc"><i>277</i>&nbsp;            match(token, TokenType.LE_TOK);</b>
+<b class="nc"><i>278</i>&nbsp;            op = RelationalOperator.LE_OP;</b>
+<b class="nc"><i>279</i>&nbsp;        } else if (token.getTokType() == TokenType.LT_TOK) {</b>
+<b class="nc"><i>280</i>&nbsp;            match(token, TokenType.LT_TOK);</b>
+<b class="nc"><i>281</i>&nbsp;            op = RelationalOperator.LT_OP;</b>
+<b class="nc"><i>282</i>&nbsp;        } else if (token.getTokType() == TokenType.GE_TOK) {</b>
+<b class="nc"><i>283</i>&nbsp;            match(token, TokenType.GE_TOK);</b>
+<b class="nc"><i>284</i>&nbsp;            op = RelationalOperator.GE_OP;</b>
+<b class="nc"><i>285</i>&nbsp;        } else if (token.getTokType() == TokenType.GT_TOK) {</b>
+<b class="nc"><i>286</i>&nbsp;            match(token, TokenType.GT_TOK);</b>
+<b class="nc"><i>287</i>&nbsp;            op = RelationalOperator.GT_OP;</b>
+<b class="nc"><i>288</i>&nbsp;        } else if (token.getTokType() == TokenType.EQ_TOK) {</b>
+<b class="nc"><i>289</i>&nbsp;            match(token, TokenType.EQ_TOK);</b>
+<b class="nc"><i>290</i>&nbsp;            op = RelationalOperator.EQ_OP;</b>
+<b class="nc"><i>291</i>&nbsp;        } else if (token.getTokType() == TokenType.NE_TOK) {</b>
+<b class="nc"><i>292</i>&nbsp;            match(token, TokenType.NE_TOK);</b>
+<b class="nc"><i>293</i>&nbsp;            op = RelationalOperator.NE_TOK;</b>
+<i>294</i>&nbsp;        } else
+<b class="nc"><i>295</i>&nbsp;            throw new ParserException(&quot; operator expected at row &quot; +</b>
+<i>296</i>&nbsp;                    token.getRowNumber() + &quot; and column &quot; + token.getColumnNumber());
+<b class="nc"><i>297</i>&nbsp;        Expression expression1 = getExpression();</b>
+<b class="nc"><i>298</i>&nbsp;        Expression expression2 = getExpression();</b>
+<b class="nc"><i>299</i>&nbsp;        return new BooleanExpression(op, expression1, expression2);</b>
 <i>300</i>&nbsp;    }
 <i>301</i>&nbsp;
 <i>302</i>&nbsp;    /**
-<b class="fc"><i>303</i>&nbsp;     * @param tok     - The token to print.</b>
-<b class="nc"><i>304</i>&nbsp;     * @param tokType - The token type to print.</b>
+<i>303</i>&nbsp;     * @return Id
+<i>304</i>&nbsp;     * @throws LexicalException
 <i>305</i>&nbsp;     * @throws ParserException
-<b class="fc"><i>306</i>&nbsp;     */</b>
-<i>307</i>&nbsp;    private void match(Token tok, TokenType tokType) throws ParserException {
-<i>308</i>&nbsp;        if (tok.getTokType() != tokType)
-<i>309</i>&nbsp;            throw new ParserException(tokType.name() + &quot; expected at row &quot; +
-<i>310</i>&nbsp;                    tok.getRowNumber() + &quot; and column &quot; + tok.getColumnNumber() + &quot; Actual: &quot; + tok.getLexeme());
-<i>311</i>&nbsp;    }
-<i>312</i>&nbsp;}
+<i>306</i>&nbsp;     */
+<i>307</i>&nbsp;    private Id getId() throws LexicalException, ParserException {
+<i>308</i>&nbsp;        Token token;
+<i>309</i>&nbsp;
+<b class="fc"><i>310</i>&nbsp;        token = lex.getNextToken();</b>
+<b class="fc"><i>311</i>&nbsp;        match(token, TokenType.ID_TOK);</b>
+<b class="fc"><i>312</i>&nbsp;        return new Id(token.getLexeme().charAt(0));</b>
+<i>313</i>&nbsp;    }
+<i>314</i>&nbsp;
+<i>315</i>&nbsp;    /**
+<i>316</i>&nbsp;     * @return Constant
+<i>317</i>&nbsp;     * @throws ParserException
+<i>318</i>&nbsp;     * @throws LexicalException
+<i>319</i>&nbsp;     */
+<i>320</i>&nbsp;    private Expression getConstant() throws ParserException, LexicalException {
+<i>321</i>&nbsp;        Token tok;
+<i>322</i>&nbsp;        int value;
+<i>323</i>&nbsp;
+<b class="fc"><i>324</i>&nbsp;        tok = lex.getNextToken();</b>
+<b class="fc"><i>325</i>&nbsp;        match(tok, TokenType.CONST_TOK);</b>
+<b class="fc"><i>326</i>&nbsp;        value = Integer.parseInt(tok.getLexeme());</b>
+<b class="fc"><i>327</i>&nbsp;        return new Constant(value);</b>
+<i>328</i>&nbsp;    }
+<i>329</i>&nbsp;
+<i>330</i>&nbsp;    /**
+<i>331</i>&nbsp;     * @param tok     - The token to print.
+<i>332</i>&nbsp;     * @param tokType - The token type to print.
+<i>333</i>&nbsp;     * @throws ParserException
+<i>334</i>&nbsp;     */
+<i>335</i>&nbsp;    private void match(Token tok, TokenType tokType) throws ParserException {
+<b class="fc"><i>336</i>&nbsp;        if (tok.getTokType() != tokType)</b>
+<b class="nc"><i>337</i>&nbsp;            throw new ParserException(tokType.name() + &quot; expected at row &quot; +</b>
+<i>338</i>&nbsp;                    tok.getRowNumber() + &quot; and column &quot; + tok.getColumnNumber() + &quot; ,actual: &quot; + tok.getLexeme());
+<b class="fc"><i>339</i>&nbsp;    }</b>
+<i>340</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2014-09-29 08:49</div>
+    <div style="float:right;">generated on 2014-09-30 12:46</div>
 </div>
 </body>
 </html>

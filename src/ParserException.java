@@ -1,5 +1,5 @@
 /**
- * The ParcelException class is used to report any paring errors.
+ * The ParcelException class
  */
 public class ParserException extends Exception
 {
@@ -10,7 +10,6 @@ public class ParserException extends Exception
      */
 	public ParserException(String string)
 	{
-		// TODO Auto-generated constructor stub
         System.out.println("[Parser Exception] " + string);
 	}
 

@@ -1,5 +1,5 @@
 /**
- * The PrintStatement class is used to execute console reporting.
+ * The PrintStatement class
  */
 public class PrintStatement implements Statement {
 

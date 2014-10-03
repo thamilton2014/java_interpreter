@@ -58,10 +58,10 @@
 </td>
 <td class="coverageStat">
   <span class="percent">
-    83.2%
+    65.7%
   </span>
   <span class="absValue">
-    (84/ 101)
+    (67/ 102)
   </span>
 </td>
 </tr>
@@ -79,11 +79,11 @@
 <i>5</i>&nbsp;import java.util.Scanner;
 <i>6</i>&nbsp;
 <i>7</i>&nbsp;/**
-<i>8</i>&nbsp; *
+<i>8</i>&nbsp; * The LexicalAnalyzer class
 <i>9</i>&nbsp; */
 <i>10</i>&nbsp;public class LexicalAnalyzer {
 <i>11</i>&nbsp;
-<i>12</i>&nbsp;    private List&lt;Token&gt; tokens;
+<i>12</i>&nbsp;    final private List&lt;Token&gt; tokens;
 <i>13</i>&nbsp;
 <i>14</i>&nbsp;    /**
 <i>15</i>&nbsp;     * @param fileName File
@@ -129,7 +129,7 @@
 <i>55</i>&nbsp;     */
 <i>56</i>&nbsp;    private TokenType getTokenType(String lexeme, int lineNumber, int columnNumber) throws LexicalException {
 <i>57</i>&nbsp;        TokenType tokType;
-<b class="fc"><i>58</i>&nbsp;        if (lexeme.contains(&quot;feature&quot;))</b>
+<b class="fc"><i>58</i>&nbsp;        if (lexeme.contains(FeatureConstants.FEATURE))</b>
 <b class="fc"><i>59</i>&nbsp;            tokType = TokenType.FEATURE_TOK;</b>
 <b class="fc"><i>60</i>&nbsp;        else if (lexeme.matches(&quot;[a-zA-Z]&quot;)) {</b>
 <b class="fc"><i>61</i>&nbsp;            if (lexeme.length() == 1)</b>
@@ -147,118 +147,118 @@
 <i>73</i>&nbsp;            else
 <b class="nc"><i>74</i>&nbsp;                throw new LexicalException(&quot;invalid lexeme at row number &quot; +</b>
 <i>75</i>&nbsp;                        (lineNumber + 1) + &quot; and column &quot; + (columnNumber + 1));
-<b class="fc"><i>76</i>&nbsp;        } else if (lexeme.contains(&quot;is&quot;))</b>
+<b class="fc"><i>76</i>&nbsp;        } else if (lexeme.contains(FeatureConstants.IS))</b>
 <b class="fc"><i>77</i>&nbsp;            tokType = TokenType.IS_TOK;</b>
-<b class="fc"><i>78</i>&nbsp;        else if (lexeme.contains(&quot;do&quot;))</b>
+<b class="fc"><i>78</i>&nbsp;        else if (lexeme.contains(FeatureConstants.DO))</b>
 <b class="fc"><i>79</i>&nbsp;            tokType = TokenType.DO_TOK;</b>
-<b class="fc"><i>80</i>&nbsp;        else if (lexeme.equals(&quot;+&quot;))</b>
-<b class="fc"><i>81</i>&nbsp;            tokType = TokenType.ADD_TOK;</b>
-<b class="fc"><i>82</i>&nbsp;        else if (lexeme.equals(&quot;*&quot;))</b>
+<b class="fc"><i>80</i>&nbsp;        else if (lexeme.equals(FeatureConstants.PLUS))</b>
+<b class="nc"><i>81</i>&nbsp;            tokType = TokenType.ADD_TOK;</b>
+<b class="fc"><i>82</i>&nbsp;        else if (lexeme.equals(FeatureConstants.MULTIPLY))</b>
 <b class="nc"><i>83</i>&nbsp;            tokType = TokenType.MUL_TOK;</b>
-<b class="fc"><i>84</i>&nbsp;        else if (lexeme.equals(&quot;:=&quot;))</b>
-<b class="fc"><i>85</i>&nbsp;            tokType = TokenType.ASSIGN_TOK;</b>
-<b class="fc"><i>86</i>&nbsp;        else if (lexeme.contains(&quot;print&quot;))</b>
-<b class="fc"><i>87</i>&nbsp;            tokType = TokenType.PRINT_TOK;</b>
-<b class="fc"><i>88</i>&nbsp;        else if (lexeme.contains(&quot;(&quot;) || lexeme.contains(&quot;)&quot;))</b>
-<b class="nc"><i>89</i>&nbsp;            tokType = TokenType.PARAN_TOK;</b>
-<b class="fc"><i>90</i>&nbsp;        else if (lexeme.contains(&quot;end&quot;))</b>
-<b class="fc"><i>91</i>&nbsp;            tokType = TokenType.END_TOK;</b>
-<b class="fc"><i>92</i>&nbsp;        else if (lexeme.contains(&quot;=&quot;))</b>
-<b class="nc"><i>93</i>&nbsp;            tokType = TokenType.EQ_TOK;</b>
-<b class="fc"><i>94</i>&nbsp;        else if (lexeme.contains(&quot;/=&quot;))</b>
-<b class="nc"><i>95</i>&nbsp;            tokType = TokenType.NE_TOK;</b>
-<b class="fc"><i>96</i>&nbsp;        else if (lexeme.equals(&quot;&gt;&quot;))</b>
-<b class="fc"><i>97</i>&nbsp;            tokType = TokenType.GT_TOK;</b>
-<b class="fc"><i>98</i>&nbsp;        else if (lexeme.equals(&quot;&gt;=&quot;))</b>
-<b class="nc"><i>99</i>&nbsp;            tokType = TokenType.GE_TOK;</b>
-<b class="fc"><i>100</i>&nbsp;        else if (lexeme.equals(&quot;&lt;&quot;))</b>
-<b class="nc"><i>101</i>&nbsp;            tokType = TokenType.LT_TOK;</b>
-<b class="fc"><i>102</i>&nbsp;        else if (lexeme.equals(&quot;&lt;=&quot;))</b>
-<b class="nc"><i>103</i>&nbsp;            tokType = TokenType.LE_TOK;</b>
-<b class="fc"><i>104</i>&nbsp;        else if (lexeme.equals(&quot;if&quot;))</b>
-<b class="nc"><i>105</i>&nbsp;            tokType = TokenType.IF_TOK;</b>
-<b class="fc"><i>106</i>&nbsp;        else if (lexeme.equals(&quot;else&quot;))</b>
-<b class="nc"><i>107</i>&nbsp;            tokType = TokenType.ELSE_TOK;</b>
-<b class="fc"><i>108</i>&nbsp;        else if (lexeme.equals(&quot;then&quot;))</b>
-<b class="nc"><i>109</i>&nbsp;            tokType = TokenType.THEN_TOK;</b>
-<b class="fc"><i>110</i>&nbsp;        else if (lexeme.equals(&quot;from&quot;))</b>
-<b class="fc"><i>111</i>&nbsp;            tokType = TokenType.FROM_TOK;</b>
-<b class="fc"><i>112</i>&nbsp;        else if (lexeme.equals(&quot;until&quot;))</b>
-<b class="fc"><i>113</i>&nbsp;            tokType = TokenType.UNTIL_TOK;</b>
-<b class="fc"><i>114</i>&nbsp;        else if (lexeme.equals(&quot;loop&quot;))</b>
-<b class="fc"><i>115</i>&nbsp;            tokType = TokenType.LOOP_TOK;</b>
-<i>116</i>&nbsp;        else
-<b class="nc"><i>117</i>&nbsp;            throw new LexicalException(&quot;invalid lexeme at row number &quot; +</b>
-<i>118</i>&nbsp;                    (lineNumber + 1) + &quot; and column &quot; + (columnNumber + 1) + &quot; [Lexeme] &quot; + lexeme);
-<b class="fc"><i>119</i>&nbsp;        return tokType;</b>
-<i>120</i>&nbsp;    }
-<i>121</i>&nbsp;
-<i>122</i>&nbsp;    /**
-<i>123</i>&nbsp;     * @param s String
-<i>124</i>&nbsp;     * @return boolean
-<i>125</i>&nbsp;     */
-<i>126</i>&nbsp;    private boolean allDigits(String s) {
-<b class="fc"><i>127</i>&nbsp;        int i = 0;</b>
-<b class="fc"><i>128</i>&nbsp;        while (i &lt; s.length() &amp;&amp; Character.isDigit(s.charAt(i)))</b>
-<b class="fc"><i>129</i>&nbsp;            i++;</b>
-<b class="fc"><i>130</i>&nbsp;        return i == s.length();</b>
-<i>131</i>&nbsp;    }
-<i>132</i>&nbsp;
-<i>133</i>&nbsp;    /**
-<i>134</i>&nbsp;     * @param line  String
-<i>135</i>&nbsp;     * @param index int
-<i>136</i>&nbsp;     * @return String
-<i>137</i>&nbsp;     */
-<i>138</i>&nbsp;    private String getLexeme(String line, int index) {
-<b class="fc"><i>139</i>&nbsp;        int i = index;</b>
-<b class="fc"><i>140</i>&nbsp;        while (i &lt; line.length() &amp;&amp; !Character.isWhitespace(line.charAt(i)))</b>
-<b class="fc"><i>141</i>&nbsp;            i++;</b>
-<b class="fc"><i>142</i>&nbsp;        return line.substring(index, i);</b>
-<i>143</i>&nbsp;    }
-<i>144</i>&nbsp;
-<i>145</i>&nbsp;    /**
-<i>146</i>&nbsp;     * @param line  String
-<i>147</i>&nbsp;     * @param index int
-<i>148</i>&nbsp;     * @return int index
-<i>149</i>&nbsp;     */
-<i>150</i>&nbsp;    private int skipWhiteSpace(String line, int index) {
-<b class="fc"><i>151</i>&nbsp;        while (index &lt; line.length() &amp;&amp; Character.isWhitespace(line.charAt(index)))</b>
-<b class="fc"><i>152</i>&nbsp;            index++;</b>
-<b class="fc"><i>153</i>&nbsp;        return index;</b>
-<i>154</i>&nbsp;    }
-<i>155</i>&nbsp;
-<i>156</i>&nbsp;    /**
-<i>157</i>&nbsp;     * @return Token
-<i>158</i>&nbsp;     * @throws LexicalException
-<i>159</i>&nbsp;     */
-<i>160</i>&nbsp;    public Token getNextToken() throws LexicalException {
-<b class="fc"><i>161</i>&nbsp;        if (tokens.isEmpty())</b>
-<b class="nc"><i>162</i>&nbsp;            throw new LexicalException(&quot;no more tokens&quot;);</b>
-<b class="fc"><i>163</i>&nbsp;        return tokens.remove(0);</b>
-<i>164</i>&nbsp;    }
-<i>165</i>&nbsp;
-<i>166</i>&nbsp;    /**
-<i>167</i>&nbsp;     * @return Token
-<i>168</i>&nbsp;     * @throws LexicalException
-<i>169</i>&nbsp;     */
-<i>170</i>&nbsp;    public Token getLookaheadToken() throws LexicalException {
-<b class="fc"><i>171</i>&nbsp;        if (tokens.isEmpty())</b>
-<b class="nc"><i>172</i>&nbsp;            throw new LexicalException(&quot;no more tokens&quot;);</b>
-<b class="fc"><i>173</i>&nbsp;        return tokens.get(0);</b>
-<i>174</i>&nbsp;    }
-<i>175</i>&nbsp;
-<i>176</i>&nbsp;    /**
-<i>177</i>&nbsp;     * @param ch char
-<i>178</i>&nbsp;     * @return boolean
-<i>179</i>&nbsp;     */
-<i>180</i>&nbsp;    public static boolean isValidIdentifier(char ch) {
-<b class="fc"><i>181</i>&nbsp;        String test = &quot;abcdefghijklmnopqrstuvwxyz&quot;;</b>
-<b class="fc"><i>182</i>&nbsp;        for (Character in : test.toLowerCase().toCharArray()) {</b>
-<b class="fc"><i>183</i>&nbsp;            if (ch == in)</b>
-<b class="fc"><i>184</i>&nbsp;                return true;</b>
-<i>185</i>&nbsp;        }
-<b class="fc"><i>186</i>&nbsp;        for (Character in : test.toUpperCase().toCharArray()) {</b>
-<b class="fc"><i>187</i>&nbsp;            if (ch == in)</b>
+<b class="fc"><i>84</i>&nbsp;        else if (lexeme.equals(FeatureConstants.MINUS))</b>
+<b class="nc"><i>85</i>&nbsp;            tokType = TokenType.SUB_TOK;</b>
+<b class="fc"><i>86</i>&nbsp;        else if (lexeme.equals(FeatureConstants.DIVIDE))</b>
+<b class="nc"><i>87</i>&nbsp;            tokType = TokenType.DIV_TOK;</b>
+<b class="fc"><i>88</i>&nbsp;        else if (lexeme.equals(FeatureConstants.ASSIGN))</b>
+<b class="fc"><i>89</i>&nbsp;            tokType = TokenType.ASSIGN_TOK;</b>
+<b class="fc"><i>90</i>&nbsp;        else if (lexeme.contains(FeatureConstants.PRINT))</b>
+<b class="fc"><i>91</i>&nbsp;            tokType = TokenType.PRINT_TOK;</b>
+<b class="fc"><i>92</i>&nbsp;        else if (lexeme.contains(&quot;(&quot;) || lexeme.contains(&quot;)&quot;))</b>
+<b class="fc"><i>93</i>&nbsp;            tokType = TokenType.PARAN_TOK;</b>
+<b class="fc"><i>94</i>&nbsp;        else if (lexeme.contains(FeatureConstants.END))</b>
+<b class="fc"><i>95</i>&nbsp;            tokType = TokenType.END_TOK;</b>
+<b class="nc"><i>96</i>&nbsp;        else if (lexeme.contains(FeatureConstants.EQ))</b>
+<b class="nc"><i>97</i>&nbsp;            tokType = TokenType.EQ_TOK;</b>
+<b class="nc"><i>98</i>&nbsp;        else if (lexeme.contains(FeatureConstants.NE))</b>
+<b class="nc"><i>99</i>&nbsp;            tokType = TokenType.NE_TOK;</b>
+<b class="nc"><i>100</i>&nbsp;        else if (lexeme.equals(FeatureConstants.GT))</b>
+<b class="nc"><i>101</i>&nbsp;            tokType = TokenType.GT_TOK;</b>
+<b class="nc"><i>102</i>&nbsp;        else if (lexeme.equals(FeatureConstants.GE))</b>
+<b class="nc"><i>103</i>&nbsp;            tokType = TokenType.GE_TOK;</b>
+<b class="nc"><i>104</i>&nbsp;        else if (lexeme.equals(FeatureConstants.LT))</b>
+<b class="nc"><i>105</i>&nbsp;            tokType = TokenType.LT_TOK;</b>
+<b class="nc"><i>106</i>&nbsp;        else if (lexeme.equals(FeatureConstants.LE))</b>
+<b class="nc"><i>107</i>&nbsp;            tokType = TokenType.LE_TOK;</b>
+<b class="nc"><i>108</i>&nbsp;        else if (lexeme.equals(FeatureConstants.IF))</b>
+<b class="nc"><i>109</i>&nbsp;            tokType = TokenType.IF_TOK;</b>
+<b class="nc"><i>110</i>&nbsp;        else if (lexeme.equals(FeatureConstants.ELSE))</b>
+<b class="nc"><i>111</i>&nbsp;            tokType = TokenType.ELSE_TOK;</b>
+<b class="nc"><i>112</i>&nbsp;        else if (lexeme.equals(FeatureConstants.THEN))</b>
+<b class="nc"><i>113</i>&nbsp;            tokType = TokenType.THEN_TOK;</b>
+<b class="nc"><i>114</i>&nbsp;        else if (lexeme.equals(FeatureConstants.FROM))</b>
+<b class="nc"><i>115</i>&nbsp;            tokType = TokenType.FROM_TOK;</b>
+<b class="nc"><i>116</i>&nbsp;        else if (lexeme.equals(FeatureConstants.UNTIL))</b>
+<b class="nc"><i>117</i>&nbsp;            tokType = TokenType.UNTIL_TOK;</b>
+<b class="nc"><i>118</i>&nbsp;        else if (lexeme.equals(FeatureConstants.LOOP))</b>
+<b class="nc"><i>119</i>&nbsp;            tokType = TokenType.LOOP_TOK;</b>
+<i>120</i>&nbsp;        else
+<b class="nc"><i>121</i>&nbsp;            throw new LexicalException(&quot;invalid lexeme at row number &quot; +</b>
+<i>122</i>&nbsp;                    (lineNumber + 1) + &quot; and column &quot; + (columnNumber + 1) + &quot; [Lexeme] &quot; + lexeme);
+<b class="fc"><i>123</i>&nbsp;        return tokType;</b>
+<i>124</i>&nbsp;    }
+<i>125</i>&nbsp;
+<i>126</i>&nbsp;    /**
+<i>127</i>&nbsp;     * @param s String
+<i>128</i>&nbsp;     * @return boolean
+<i>129</i>&nbsp;     */
+<i>130</i>&nbsp;    private boolean allDigits(String s) {
+<b class="fc"><i>131</i>&nbsp;        int i = 0;</b>
+<b class="fc"><i>132</i>&nbsp;        while (i &lt; s.length() &amp;&amp; Character.isDigit(s.charAt(i)))</b>
+<b class="fc"><i>133</i>&nbsp;            i++;</b>
+<b class="fc"><i>134</i>&nbsp;        return i == s.length();</b>
+<i>135</i>&nbsp;    }
+<i>136</i>&nbsp;
+<i>137</i>&nbsp;    /**
+<i>138</i>&nbsp;     * @param line  String
+<i>139</i>&nbsp;     * @param index int
+<i>140</i>&nbsp;     * @return String
+<i>141</i>&nbsp;     */
+<i>142</i>&nbsp;    private String getLexeme(String line, int index) {
+<b class="fc"><i>143</i>&nbsp;        int i = index;</b>
+<b class="fc"><i>144</i>&nbsp;        while (i &lt; line.length() &amp;&amp; !Character.isWhitespace(line.charAt(i)))</b>
+<b class="fc"><i>145</i>&nbsp;            i++;</b>
+<b class="fc"><i>146</i>&nbsp;        return line.substring(index, i);</b>
+<i>147</i>&nbsp;    }
+<i>148</i>&nbsp;
+<i>149</i>&nbsp;    /**
+<i>150</i>&nbsp;     * @param line  String
+<i>151</i>&nbsp;     * @param index int
+<i>152</i>&nbsp;     * @return int index
+<i>153</i>&nbsp;     */
+<i>154</i>&nbsp;    private int skipWhiteSpace(String line, int index) {
+<b class="fc"><i>155</i>&nbsp;        while (index &lt; line.length() &amp;&amp; Character.isWhitespace(line.charAt(index)))</b>
+<b class="fc"><i>156</i>&nbsp;            index++;</b>
+<b class="fc"><i>157</i>&nbsp;        return index;</b>
+<i>158</i>&nbsp;    }
+<i>159</i>&nbsp;
+<i>160</i>&nbsp;    /**
+<i>161</i>&nbsp;     * @return Token
+<i>162</i>&nbsp;     * @throws LexicalException
+<i>163</i>&nbsp;     */
+<i>164</i>&nbsp;    public Token getNextToken() throws LexicalException {
+<b class="fc"><i>165</i>&nbsp;        if (tokens.isEmpty())</b>
+<b class="nc"><i>166</i>&nbsp;            throw new LexicalException(&quot;no more tokens&quot;);</b>
+<b class="fc"><i>167</i>&nbsp;        return tokens.remove(0);</b>
+<i>168</i>&nbsp;    }
+<i>169</i>&nbsp;
+<i>170</i>&nbsp;    /**
+<i>171</i>&nbsp;     * @return Token
+<i>172</i>&nbsp;     * @throws LexicalException
+<i>173</i>&nbsp;     */
+<i>174</i>&nbsp;    public Token getLookaheadToken() throws LexicalException {
+<b class="fc"><i>175</i>&nbsp;        if (tokens.isEmpty())</b>
+<b class="nc"><i>176</i>&nbsp;            throw new LexicalException(&quot;no more tokens&quot;);</b>
+<b class="fc"><i>177</i>&nbsp;        return tokens.get(0);</b>
+<i>178</i>&nbsp;    }
+<i>179</i>&nbsp;
+<i>180</i>&nbsp;    /**
+<i>181</i>&nbsp;     * @param ch char
+<i>182</i>&nbsp;     * @return boolean
+<i>183</i>&nbsp;     */
+<i>184</i>&nbsp;    public static boolean isValidIdentifier(char ch) {
+<b class="fc"><i>185</i>&nbsp;        char id = Character.toUpperCase(ch);</b>
+<b class="fc"><i>186</i>&nbsp;        for (Character in : FeatureConstants.ID.toCharArray()) {</b>
+<b class="fc"><i>187</i>&nbsp;            if (id == in)</b>
 <b class="fc"><i>188</i>&nbsp;                return true;</b>
 <i>189</i>&nbsp;        }
 <b class="nc"><i>190</i>&nbsp;        return false;</b>
@@ -269,7 +269,7 @@
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2014-09-29 08:49</div>
+    <div style="float:right;">generated on 2014-09-30 12:46</div>
 </div>
 </body>
 </html>

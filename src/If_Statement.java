@@ -1,5 +1,5 @@
 /**
- * The If_Statement class is used to determine the boolean expression and then execute the appropriate code block.
+ * The If_Statement class
  */
 public class If_Statement implements Statement {
 

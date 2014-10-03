@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * The LexicalAnalyzer class should determine the Tokens to be used.
+ * The LexicalAnalyzer class
  */
 public class LexicalAnalyzer {
 
@@ -89,8 +89,10 @@ public class LexicalAnalyzer {
             tokType = TokenType.ASSIGN_TOK;
         else if (lexeme.contains(FeatureConstants.PRINT))
             tokType = TokenType.PRINT_TOK;
-        else if (lexeme.contains("(") || lexeme.contains(")"))
-            tokType = TokenType.PARAN_TOK;
+        else if (lexeme.contains("("))
+            tokType = TokenType.LPARAN_TOK;
+        else if (lexeme.contains(")"))
+            tokType = TokenType.RPARAN_TOK;
         else if (lexeme.contains(FeatureConstants.END))
             tokType = TokenType.END_TOK;
         else if (lexeme.contains(FeatureConstants.EQ))
