@@ -220,7 +220,7 @@ public class Parser {
 
         tok = lex.getLookaheadToken();
         if (tok.getTokType() == TokenType.ADD_TOK
-            || tok.getTokType() == TokenType.MUL_TOK
+                || tok.getTokType() == TokenType.MUL_TOK
                 || tok.getTokType() == TokenType.DIV_TOK
                 || tok.getTokType() == TokenType.SUB_TOK)
             expr = getBinaryExpression();

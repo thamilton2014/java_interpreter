@@ -39,6 +39,7 @@ public class LexicalAnalyzer {
         index = skipWhiteSpace(line, index);
         while (index < line.length()) {
             String lexeme = getLexeme(line, index);
+            System.out.println("[Debug] "+ lexeme);
             TokenType tokType = getTokenType(lexeme, lineNumber, index);
             tokens.add(new Token(lineNumber + 1, index + 1, lexeme, tokType));
             index += lexeme.length();
@@ -143,7 +144,7 @@ public class LexicalAnalyzer {
      */
     private String getLexeme(String line, int index) {
         int i = index;
-        while (i < line.length() && !Character.isWhitespace(line.charAt(i)))
+        while (i < line.length() &&  !Character.isWhitespace(line.charAt(i)))
             i++;
         return line.substring(index, i);
     }

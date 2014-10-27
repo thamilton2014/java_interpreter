@@ -10,9 +10,10 @@ public class Interpreter {
      */
     public static void main(String[] args) {
         try {
-            if (args.length == 0)
-                throw new IllegalArgumentException("[CLI] Usage: 'java -jar <file location>'");
-            Parser p = new Parser(args[0]);
+//            if (args.length == 0)
+//                throw new IllegalArgumentException("[CLI] Usage: 'java -jar <file location>'");
+//            Parser p = new Parser(args[0]);
+            Parser p = new Parser(System.getProperty("user.dir") + "/test_data/test1.e");
             p.execute();
             Memory.displayMemory();
         } catch (ParserException e) {

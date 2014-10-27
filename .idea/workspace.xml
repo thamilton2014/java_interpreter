@@ -7,116 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe0e8bd8-d27c-4da5-b34e-109bd4e7edb3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadocs/FeatureConstants.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadocs/index-files/index-16.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadocs/index-files/index-17.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run-fast" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/ArithmeticOperator.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/ArithmeticOperator.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/ArithmeticOperator.html" afterPath="$PROJECT_DIR$/javadocs/ArithmeticOperator.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Assignment.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Assignment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Assignment.html" afterPath="$PROJECT_DIR$/javadocs/Assignment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/BinaryExpression.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/BinaryExpression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/BinaryExpression.html" afterPath="$PROJECT_DIR$/javadocs/BinaryExpression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinaryExpression.java" afterPath="$PROJECT_DIR$/src/BinaryExpression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/BooleanExpression.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/BooleanExpression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/BooleanExpression.html" afterPath="$PROJECT_DIR$/javadocs/BooleanExpression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BooleanExpression.java" afterPath="$PROJECT_DIR$/src/BooleanExpression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/CodeBlock.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/CodeBlock.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/CodeBlock.html" afterPath="$PROJECT_DIR$/javadocs/CodeBlock.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeBlock.java" afterPath="$PROJECT_DIR$/src/CodeBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Constant.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Constant.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Constant.html" afterPath="$PROJECT_DIR$/javadocs/Constant.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Constant.java" afterPath="$PROJECT_DIR$/src/Constant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Expression.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Expression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Expression.html" afterPath="$PROJECT_DIR$/javadocs/Expression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FeatureConstants.java" afterPath="$PROJECT_DIR$/src/FeatureConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Id.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Id.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Id.html" afterPath="$PROJECT_DIR$/javadocs/Id.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/If_Statement.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/If_Statement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/If_Statement.html" afterPath="$PROJECT_DIR$/javadocs/If_Statement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/If_Statement.java" afterPath="$PROJECT_DIR$/src/If_Statement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Interpreter.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Interpreter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Interpreter.html" afterPath="$PROJECT_DIR$/javadocs/Interpreter.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/test2.e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/test3.e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/test4.e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/test5.e" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interpreter.java" afterPath="$PROJECT_DIR$/src/Interpreter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/LexicalAnalyzer.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/LexicalAnalyzer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/LexicalAnalyzer.html" afterPath="$PROJECT_DIR$/javadocs/LexicalAnalyzer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LexicalAnalyzer.java" afterPath="$PROJECT_DIR$/src/LexicalAnalyzer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/LexicalException.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/LexicalException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/LexicalException.html" afterPath="$PROJECT_DIR$/javadocs/LexicalException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LexicalException.java" afterPath="$PROJECT_DIR$/src/LexicalException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/LoopStatement.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/LoopStatement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/LoopStatement.html" afterPath="$PROJECT_DIR$/javadocs/LoopStatement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LoopStatement.java" afterPath="$PROJECT_DIR$/src/LoopStatement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Memory.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Memory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Memory.html" afterPath="$PROJECT_DIR$/javadocs/Memory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Memory.java" afterPath="$PROJECT_DIR$/src/Memory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Parser.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Parser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Parser.html" afterPath="$PROJECT_DIR$/javadocs/Parser.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Parser.java" afterPath="$PROJECT_DIR$/src/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/ParserException.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/ParserException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/ParserException.html" afterPath="$PROJECT_DIR$/javadocs/ParserException.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ParserException.java" afterPath="$PROJECT_DIR$/src/ParserException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/PrintStatement.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/PrintStatement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/PrintStatement.html" afterPath="$PROJECT_DIR$/javadocs/PrintStatement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PrintStatement.java" afterPath="$PROJECT_DIR$/src/PrintStatement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Program.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Program.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Program.html" afterPath="$PROJECT_DIR$/javadocs/Program.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Program.java" afterPath="$PROJECT_DIR$/src/Program.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/RelationalOperator.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/RelationalOperator.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/RelationalOperator.html" afterPath="$PROJECT_DIR$/javadocs/RelationalOperator.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Statement.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Statement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Statement.html" afterPath="$PROJECT_DIR$/javadocs/Statement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/Token.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/Token.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Token.html" afterPath="$PROJECT_DIR$/javadocs/Token.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/.classes/TokenType.html" afterPath="$PROJECT_DIR$/coverage/.empty/.classes/TokenType.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/TokenType.html" afterPath="$PROJECT_DIR$/javadocs/TokenType.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TokenType.java" afterPath="$PROJECT_DIR$/src/TokenType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/allclasses-frame.html" afterPath="$PROJECT_DIR$/javadocs/allclasses-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/allclasses-noframe.html" afterPath="$PROJECT_DIR$/javadocs/allclasses-noframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/constant-values.html" afterPath="$PROJECT_DIR$/javadocs/constant-values.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/deprecated-list.html" afterPath="$PROJECT_DIR$/javadocs/deprecated-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/help-doc.html" afterPath="$PROJECT_DIR$/javadocs/help-doc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-1.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-10.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-10.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-11.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-11.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-12.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-13.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-14.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-14.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-15.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-15.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-2.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-3.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-4.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-5.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-6.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-7.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-8.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-9.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index.html" afterPath="$PROJECT_DIR$/coverage/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index.html" afterPath="$PROJECT_DIR$/coverage/.empty/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index.html" afterPath="$PROJECT_DIR$/javadocs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index_SORT_BY_BLOCK.html" afterPath="$PROJECT_DIR$/coverage/index_SORT_BY_BLOCK.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_BLOCK.html" afterPath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_BLOCK.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index_SORT_BY_BLOCK_DESC.html" afterPath="$PROJECT_DIR$/coverage/index_SORT_BY_BLOCK_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_BLOCK_DESC.html" afterPath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_BLOCK_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index_SORT_BY_CLASS.html" afterPath="$PROJECT_DIR$/coverage/index_SORT_BY_CLASS.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_CLASS.html" afterPath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_CLASS.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index_SORT_BY_CLASS_DESC.html" afterPath="$PROJECT_DIR$/coverage/index_SORT_BY_CLASS_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_CLASS_DESC.html" afterPath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_CLASS_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index_SORT_BY_LINE.html" afterPath="$PROJECT_DIR$/coverage/index_SORT_BY_LINE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_LINE.html" afterPath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_LINE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index_SORT_BY_LINE_DESC.html" afterPath="$PROJECT_DIR$/coverage/index_SORT_BY_LINE_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_LINE_DESC.html" afterPath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_LINE_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index_SORT_BY_METHOD.html" afterPath="$PROJECT_DIR$/coverage/index_SORT_BY_METHOD.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_METHOD.html" afterPath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_METHOD.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index_SORT_BY_METHOD_DESC.html" afterPath="$PROJECT_DIR$/coverage/index_SORT_BY_METHOD_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_METHOD_DESC.html" afterPath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_METHOD_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index_SORT_BY_NAME_DESC.html" afterPath="$PROJECT_DIR$/coverage/index_SORT_BY_NAME_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_NAME_DESC.html" afterPath="$PROJECT_DIR$/coverage/.empty/index_SORT_BY_NAME_DESC.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/overview-tree.html" afterPath="$PROJECT_DIR$/javadocs/overview-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/package-frame.html" afterPath="$PROJECT_DIR$/javadocs/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/package-summary.html" afterPath="$PROJECT_DIR$/javadocs/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/package-tree.html" afterPath="$PROJECT_DIR$/javadocs/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/serialized-form.html" afterPath="$PROJECT_DIR$/javadocs/serialized-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_data/test1.e" afterPath="$PROJECT_DIR$/test_data/test1.e" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Example_project.iws" />
@@ -150,38 +48,18 @@
       <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3765" max-vertical-offset="5190">
-              <caret line="251" column="43" selection-start-line="251" selection-start-column="43" selection-end-line="251" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="5190">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrintStatement.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PrintStatement.java">
+      <file leaf-file-name="LoopStatement.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LoopStatement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38641685" vertical-offset="0" max-vertical-offset="427">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Id.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Id.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="660">
-              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Assignment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Assignment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="495">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.1712328" vertical-offset="12" max-vertical-offset="645">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -190,38 +68,8 @@
       <file leaf-file-name="BinaryExpression.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BinaryExpression.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="765">
+            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="765">
               <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CodeBlock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeBlock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="495">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Expression.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Expression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="180">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="If_Statement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/If_Statement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="615">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -230,21 +78,8 @@
       <file leaf-file-name="LexicalAnalyzer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2610" max-vertical-offset="3000">
-              <caret line="174" column="7" selection-start-line="174" selection-start-column="7" selection-end-line="174" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test5.e" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_data/test5.e">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1755">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2640" max-vertical-offset="3015">
+              <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -256,6 +91,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -269,7 +107,6 @@
         <option value="$PROJECT_DIR$/src/Id.java" />
         <option value="$PROJECT_DIR$/src/Assignment.java" />
         <option value="$PROJECT_DIR$/src/Expression.java" />
-        <option value="$PROJECT_DIR$/src/Statement.java" />
         <option value="$PROJECT_DIR$/src/Token.java" />
         <option value="$PROJECT_DIR$/src/RelationalOperator.java" />
         <option value="$PROJECT_DIR$/src/ArithmeticOperator.java" />
@@ -286,26 +123,28 @@
         <option value="$PROJECT_DIR$/src/BooleanExpression.java" />
         <option value="$PROJECT_DIR$/src/CodeBlock.java" />
         <option value="$PROJECT_DIR$/src/FeatureConstants.java" />
-        <option value="$PROJECT_DIR$/src/If_Statement.java" />
-        <option value="$PROJECT_DIR$/src/LoopStatement.java" />
         <option value="$PROJECT_DIR$/src/Memory.java" />
         <option value="$PROJECT_DIR$/src/ParserException.java" />
         <option value="$PROJECT_DIR$/src/PrintStatement.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
         <option value="$PROJECT_DIR$/src/LexicalException.java" />
         <option value="$PROJECT_DIR$/src/Constant.java" />
-        <option value="$PROJECT_DIR$/src/Interpreter.java" />
         <option value="$PROJECT_DIR$/run-fast" />
         <option value="$PROJECT_DIR$/src/TokenType.java" />
-        <option value="$PROJECT_DIR$/src/Parser.java" />
         <option value="$PROJECT_DIR$/src/LexicalAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/Interpreter.java" />
+        <option value="$PROJECT_DIR$/src/Statement.java" />
+        <option value="$PROJECT_DIR$/src/If_Statement.java" />
+        <option value="$PROJECT_DIR$/src/Parser.java" />
+        <option value="$PROJECT_DIR$/src/LoopStatement.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="147" />
     <option name="y" value="22" />
-    <option name="width" value="1280" />
+    <option name="width" value="983" />
     <option name="height" value="719" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -364,28 +203,14 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test_data" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Example_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Example_project" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -671,21 +496,6 @@
       <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -704,6 +514,21 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
     <list size="1">
@@ -752,12 +577,40 @@
       <workItem from="1412269922567" duration="885000" />
       <workItem from="1412333386236" duration="468000" />
       <workItem from="1412333862819" duration="2253000" />
-      <workItem from="1412336418659" duration="91000" />
+      <workItem from="1412336418659" duration="450000" />
+      <workItem from="1412452040575" duration="4956000" />
+      <workItem from="1412687969135" duration="1527000" />
+      <workItem from="1412690136605" duration="487000" />
+      <workItem from="1412811295918" duration="2566000" />
+      <workItem from="1413200362552" duration="1032000" />
+      <workItem from="1413325279479" duration="399000" />
+      <workItem from="1413327883897" duration="1803000" />
+      <workItem from="1413340762421" duration="18000" />
+      <workItem from="1413400947251" duration="3918000" />
+      <workItem from="1413411377974" duration="3000" />
+      <workItem from="1413411602268" duration="782000" />
+      <workItem from="1413471658523" duration="104000" />
+      <workItem from="1413481633766" duration="6000" />
+      <workItem from="1413568944425" duration="8000" />
+      <workItem from="1413895144357" duration="7053000" />
+      <workItem from="1413931537008" duration="3836000" />
+      <workItem from="1413992270454" duration="792000" />
+      <workItem from="1414000464654" duration="7047000" />
+      <workItem from="1414076848936" duration="7263000" />
+      <workItem from="1414154997189" duration="6612000" />
+      <workItem from="1414165323108" duration="4823000" />
+      <workItem from="1414408759102" duration="158000" />
+      <workItem from="1414443922859" duration="26000" />
     </task>
+    <task id="LOCAL-00001" summary="Updates">
+      <created>1412336612804</created>
+      <updated>1412336612804</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85311000" />
+    <option name="totallyTimeSpent" value="140889000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -780,30 +633,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="719" extended-state="6" />
+    <frame x="147" y="22" width="983" height="719" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2400636" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23847377" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4848485" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4846154" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53269535" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48405796" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22455573" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22435898" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5320911" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24229543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5289855" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3711395" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -829,10 +682,32 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="114" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CodeBlock.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Parser.java</url>
+          <line>170</line>
+          <properties />
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Parser.java</url>
+          <line>270</line>
+          <properties class="Parser" method="getBooleanExpression" />
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="135" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -840,6 +715,59 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/TokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="2955">
+          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="990">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="2955">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="990">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BooleanExpression.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="630">
@@ -904,23 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_data/test1.e">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="150">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_data/test2.e">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TokenType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="165">
@@ -960,7 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="420">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,26 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="525">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_data/test2.e">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.052447554" vertical-offset="0" max-vertical-offset="572">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_data/test3.e">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1026,30 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FeatureConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.027272727" vertical-offset="0" max-vertical-offset="550">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_data/test1.e">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10909091" vertical-offset="0" max-vertical-offset="550">
-          <caret line="4" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_data/test4.e">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31548756" vertical-offset="0" max-vertical-offset="523">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/Example_project/test_data/test5.e">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1067,123 +933,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11811024" vertical-offset="30" max-vertical-offset="480">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.615942" vertical-offset="390" max-vertical-offset="870">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RelationalOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Memory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5537757" vertical-offset="253" max-vertical-offset="690">
-          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoopStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BooleanExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ArithmeticOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06864989" vertical-offset="0" max-vertical-offset="437">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.23893805" vertical-offset="0" max-vertical-offset="565">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.4778761" vertical-offset="0" max-vertical-offset="565">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TokenType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="4" column="91" selection-start-line="4" selection-start-column="91" selection-end-line="4" selection-end-column="91" />
+        <state vertical-scroll-proportion="0.15957446" vertical-offset="0" max-vertical-offset="282">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1" vertical-offset="0" max-vertical-offset="450">
+        <state vertical-scroll-proportion="0.07177033" vertical-offset="0" max-vertical-offset="627">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/If_Statement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="615">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_data/test5.e">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1755">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Assignment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinaryExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="495">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1196,34 +980,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.java">
+    <entry file="file://$PROJECT_DIR$/src/PrintStatement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2364" max-vertical-offset="2940">
-          <caret line="174" column="7" selection-start-line="174" selection-start-column="7" selection-end-line="174" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Id.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding>
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RelationalOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Memory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assignment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/If_Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BooleanExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="750">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FeatureConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024958402" vertical-offset="0" max-vertical-offset="601">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2328" max-vertical-offset="2955">
+          <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3112245" vertical-offset="237" max-vertical-offset="870">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BinaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2924" max-vertical-offset="5100">
-          <caret line="251" column="43" selection-start-line="251" selection-start-column="43" selection-end-line="251" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5100">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrintStatement.java">
+    <entry file="file://$PROJECT_DIR$/src/LoopStatement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38641685" vertical-offset="0" max-vertical-offset="427">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state vertical-scroll-proportion="1.1712328" vertical-offset="12" max-vertical-offset="645">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding />
         </state>
       </provider>
