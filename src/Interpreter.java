@@ -10,11 +10,9 @@ public class Interpreter {
      */
     public static void main(String[] args) {
         try {
-//            if (args.length == 0)
-//                throw new IllegalArgumentException("[CLI] Usage: 'java -jar <file location>'");
-//            Parser p = new Parser(args[0]);
             Parser p = new Parser(System.getProperty("user.dir") + "/test_data/test1.e");
-            p.execute();
+            Feature feature = p.parse();
+            feature.execute();
             Memory.displayMemory();
         } catch (ParserException e) {
             System.out.println("[Parser Exception] " + e.toString());
@@ -22,6 +20,8 @@ public class Interpreter {
             System.out.println("[File not found] " + e.toString());
         } catch (LexicalException e) {
             System.out.println("[Lexical Exception] " + e.toString());
+        } catch (Exception e){
+            System.out.println("[Exception] " + e.toString());
         }
     }
 }

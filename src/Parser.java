@@ -15,6 +15,8 @@ public class Parser {
      * @throws LexicalException
      */
     public Parser(String fileName) throws FileNotFoundException, LexicalException {
+        if (fileName == null || fileName.length() == 0)
+            throw new IllegalArgumentException("[Parser] invalid file name argument");
         lex = new LexicalAnalyzer(fileName);
     }
 
@@ -22,14 +24,15 @@ public class Parser {
      * @throws LexicalException
      * @throws ParserException
      */
-    public void execute() throws LexicalException, ParserException {
-        Program program;
+//    public void execute() throws LexicalException, ParserException {
 
-        while (lex.getLookaheadToken().getTokType() != TokenType.EOS_TOK) {
-            program = getProgram();
-            program.evaluate();
-        }
-    }
+//        Feature program;
+
+//        while (lex.getLookaheadToken().getTokType() != TokenType.EOS_TOK) {
+//            program = getProgram();
+//            program.evaluate();
+//        }
+//    }
 
     /**
      * <feature> -> feature <id> is do <compound> end
@@ -38,21 +41,20 @@ public class Parser {
      * @throws LexicalException
      * @throws ParserException
      */
-    private Program getProgram() throws LexicalException, ParserException {
-        Token token;
-        Program program;
-
-        token = lex.getNextToken();
+    public Feature parse() throws LexicalException, ParserException {
+        Token token = lex.getNextToken();
         match(token, TokenType.FEATURE_TOK);
         getId();
         token = lex.getNextToken();
         match(token, TokenType.IS_TOK);
         token = lex.getNextToken();
         match(token, TokenType.DO_TOK);
-        program = new Program(getCodeBlock());
+        Compound compound = getCompound();
         token = lex.getNextToken();
         match(token, TokenType.END_TOK);
-        return program;
+        if (token.getTokType() != TokenType.EOS_TOK)
+            throw new ParserException("garbage at end of program");
+        return new Feature(compound);
     }
 
     /**
@@ -62,8 +64,23 @@ public class Parser {
      * @throws LexicalException
      * @throws ParserException
      */
-    private CodeBlock getCodeBlock() throws LexicalException, ParserException {
-        return new CodeBlock(getStatementList());
+    private Compound getCompound() throws LexicalException, ParserException {
+        Compound compound = new Compound();
+        Statement statement = getStatement();
+        compound.add(statement);
+        Token token = getLookAheadToken();
+        while(isValidStart(token)){
+            statement = getStatement();
+            compound.add(statement);
+            token = getLookAheadToken();
+        }
+        return compound;
+// return new Compound(getStatementList());
+    }
+
+    private boolean isValidStart(Token token){
+        return token.getTokType() == TokenType.ID_TOK || token.getTokType() == TokenType.IF_TOK
+                || token.getTokType() == TokenType.PRINT_TOK || token.getTokType() == TokenType.FROM_TOK;
     }
 
     /**
@@ -71,17 +88,17 @@ public class Parser {
      * @throws LexicalException
      * @throws ParserException
      */
-    private List<Statement> getStatementList() throws LexicalException, ParserException {
-        List<Statement> statementList;
-
-        statementList = new ArrayList<Statement>();
-        while (lex.getLookaheadToken().getTokType() == TokenType.PRINT_TOK
-                || lex.getLookaheadToken().getTokType() == TokenType.ID_TOK
-                || lex.getLookaheadToken().getTokType() == TokenType.IF_TOK
-                || lex.getLookaheadToken().getTokType() == TokenType.FROM_TOK)
-            statementList.add(getStatement());
-        return statementList;
-    }
+//    private List<Statement> getStatementList() throws LexicalException, ParserException {
+//        List<Statement> statementList;
+//
+//        statementList = new ArrayList<Statement>();
+//        while (lex.getLookaheadToken().getTokType() == TokenType.PRINT_TOK
+//                || lex.getLookaheadToken().getTokType() == TokenType.ID_TOK
+//                || lex.getLookaheadToken().getTokType() == TokenType.IF_TOK
+//                || lex.getLookaheadToken().getTokType() == TokenType.FROM_TOK)
+//            statementList.add(getStatement());
+//        return statementList;
+//    }
 
     /**
      * <statement> -> <assignment_statement> | <print_statement> | <if_statement> | <loop_statement>
@@ -94,7 +111,7 @@ public class Parser {
         Token token;
         Statement statement;
 
-        token = lex.getLookaheadToken();
+        token = getLookAheadToken();
         switch (token.getTokType()) {
             case ID_TOK:
                 statement = getAssignmentStatement();
@@ -163,18 +180,18 @@ public class Parser {
     private If_Statement getIfStatement() throws LexicalException, ParserException {
         Token token;
         BooleanExpression booleanExpression;
-        CodeBlock codeBlock1;
-        CodeBlock codeBlock2;
+        Compound codeBlock1;
+        Compound codeBlock2;
 
         token = lex.getNextToken();
         match(token, TokenType.IF_TOK);
         booleanExpression = getBooleanExpression();
         token = lex.getNextToken();
         match(token, TokenType.THEN_TOK);
-        codeBlock1 = getCodeBlock();
+        codeBlock1 = getCompound();
         token = lex.getNextToken();
         match(token, TokenType.ELSE_TOK);
-        codeBlock2 = getCodeBlock();
+        codeBlock2 = getCompound();
         token = lex.getNextToken();
         match(token, TokenType.END_TOK);
         return new If_Statement(booleanExpression, codeBlock1, codeBlock2);
@@ -191,7 +208,7 @@ public class Parser {
         Token token;
         Assignment assignment;
         BooleanExpression booleanExpression;
-        CodeBlock codeBlock;
+        Compound codeBlock;
 
         token = lex.getNextToken();
         match(token, TokenType.FROM_TOK);
@@ -201,7 +218,7 @@ public class Parser {
         booleanExpression = getBooleanExpression();
         token = lex.getNextToken();
         match(token, TokenType.LOOP_TOK);
-        codeBlock = getCodeBlock();
+        codeBlock = getCompound();
         token = lex.getNextToken();
         match(token, TokenType.END_TOK);
         return new LoopStatement(assignment, booleanExpression, codeBlock);
@@ -336,5 +353,25 @@ public class Parser {
         if (tok.getTokType() != tokType)
             throw new ParserException(tokType.name() + " expected at row " +
                     tok.getRowNumber() + " and column " + tok.getColumnNumber() + " ,actual: " + tok.getLexeme());
+    }
+
+    private Token getNextToken() throws ParserException {
+        Token token;
+        try {
+            token = lex.getNextToken();
+        } catch (LexicalException e) {
+            throw new ParserException(e.getMessage());
+        }
+        return token;
+    }
+
+    private Token getLookAheadToken() throws ParserException {
+        Token token;
+        try {
+            token = lex.getLookaheadToken();
+        } catch (LexicalException e) {
+            throw new ParserException(e.getMessage());
+        }
+        return token;
     }
 }

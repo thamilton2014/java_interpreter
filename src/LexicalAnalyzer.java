@@ -17,15 +17,16 @@ public class LexicalAnalyzer {
      * @throws LexicalException
      */
     public LexicalAnalyzer(String fileName) throws FileNotFoundException, LexicalException {
+        if (fileName == null || fileName.length() == 0)
+            throw new IllegalArgumentException("[Lexical Analyzer] invalid file name argument");
         tokens = new ArrayList<Token>();
-        Scanner sourceCode = new Scanner(new File(fileName));
         int lineNumber = 0;
+        Scanner sourceCode = new Scanner(new File(fileName));
         while (sourceCode.hasNext()) {
-            String line = sourceCode.nextLine();
-            processLine(line, lineNumber);
             lineNumber++;
+            processLine(sourceCode.nextLine(), lineNumber);
         }
-        tokens.add(new Token(lineNumber, 1, "EOS", TokenType.EOS_TOK));
+        tokens.add(new Token(TokenType.EOS_TOK, "EOS", lineNumber + 1, 1));
         sourceCode.close();
     }
 
@@ -36,13 +37,12 @@ public class LexicalAnalyzer {
      */
     private void processLine(String line, int lineNumber) throws LexicalException {
         int index = 0;
-        index = skipWhiteSpace(line, index);
+        index = skipWhiteSpace(line, 0);
         while (index < line.length()) {
             String lexeme = getLexeme(line, index);
-            System.out.println("[Debug] "+ lexeme);
             TokenType tokType = getTokenType(lexeme, lineNumber, index);
-            tokens.add(new Token(lineNumber + 1, index + 1, lexeme, tokType));
             index += lexeme.length();
+            tokens.add(new Token(tokType, lexeme, lineNumber, index + 1));
             index = skipWhiteSpace(line, index);
         }
     }
@@ -144,7 +144,7 @@ public class LexicalAnalyzer {
      */
     private String getLexeme(String line, int index) {
         int i = index;
-        while (i < line.length() &&  !Character.isWhitespace(line.charAt(i)))
+        while (i < line.length() && !Character.isWhitespace(line.charAt(i)))
             i++;
         return line.substring(index, i);
     }

@@ -14,8 +14,8 @@ public class Token {
      * @param tokType      - cannot be null
      * @throws IllegalArgumentException if any precondition is not satisfied
      */
-    public Token(int rowNumber, int columnNumber, String lexeme,
-                 TokenType tokType) {
+    public Token(TokenType tokType, String lexeme, int rowNumber,
+                 int columnNumber) {
         if (rowNumber <= 0)
             throw new IllegalArgumentException("[Token] invalid row number argument");
         if (columnNumber <= 0)

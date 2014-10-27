@@ -21,7 +21,8 @@ public class Assignment implements Statement {
         this.var = var;
     }
 
-    public void evaluate() {
-        Memory.store(var.getChar(), expr.evaluate());
+    @Override
+    public void execute() {
+        Memory.store(var, expr.evaluate());
     }
 }

@@ -1,7 +1,7 @@
 /**
  * The BooleanExpression class
  */
-public class BooleanExpression implements Expression {
+public class BooleanExpression {
 
     private Expression expression1, expression2;
     private RelationalOperator op;
@@ -24,21 +24,20 @@ public class BooleanExpression implements Expression {
     /**
      * @return value
      */
-    @Override
-    public int evaluate() {
-        int value;
+    public boolean evaluate() {
+        boolean value;
         if (op == RelationalOperator.EQ_OP)
-            value = (expression1.evaluate() == expression2.evaluate()) ? 0 : 1;
+            value = (expression1.evaluate() == expression2.evaluate());
         else if (op == RelationalOperator.LE_OP)
-            value = (expression1.evaluate() <= expression2.evaluate()) ? 0 : 1;
+            value = (expression1.evaluate() <= expression2.evaluate());
         else if (op == RelationalOperator.LT_OP)
-            value = (expression1.evaluate() < expression2.evaluate()) ? 0 : 1;
+            value = (expression1.evaluate() < expression2.evaluate());
         else if (op == RelationalOperator.GE_OP)
-            value = (expression1.evaluate() >= expression2.evaluate()) ? 0 : 1;
+            value = (expression1.evaluate() >= expression2.evaluate());
         else if (op == RelationalOperator.GT_OP)
-            value = (expression1.evaluate() > expression2.evaluate()) ? 0 : 1;
+            value = (expression1.evaluate() > expression2.evaluate());
         else
-            value = (expression1.evaluate() != expression2.evaluate()) ? 0 : 1;
+            value = (expression1.evaluate() != expression2.evaluate());
         return value;
     }
 }

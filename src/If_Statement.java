@@ -4,32 +4,27 @@
 public class If_Statement implements Statement {
 
     private final BooleanExpression booleanExpression;
-    private final CodeBlock codeBlock1;
-    private final CodeBlock codeBlock2;
+    private final Compound compound_1;
+    private final Compound compound_2;
 
-    /**
-     * @param booleanExpression BooleanExpression
-     * @param codeBlock1        CodeBlock
-     * @param codeBlock2        CodeBlock
-     */
-    public If_Statement(BooleanExpression booleanExpression, CodeBlock codeBlock1, CodeBlock codeBlock2) {
+    public If_Statement(BooleanExpression booleanExpression, Compound compound_1, Compound compound_2) {
         if (booleanExpression == null)
             throw new IllegalArgumentException("[If Statement] Boolean Expression is null.");
-        if (codeBlock1 == null || codeBlock2 == null)
-            throw new IllegalArgumentException("[If Statement] Code block is null.");
+        if (compound_1 == null || compound_2 == null)
+            throw new IllegalArgumentException("[If Statement] Compound is null.");
         this.booleanExpression = booleanExpression;
-        this.codeBlock1 = codeBlock1;
-        this.codeBlock2 = codeBlock2;
+        this.compound_1 = compound_1;
+        this.compound_2 = compound_2;
     }
 
     /**
      *
      */
     @Override
-    public void evaluate() {
-        if (booleanExpression.evaluate() == 0)
-            codeBlock1.evaluate();
+    public void execute() {
+        if (booleanExpression.evaluate())
+            compound_1.execute();
         else
-            codeBlock2.evaluate();
+            compound_2.execute();
     }
 }

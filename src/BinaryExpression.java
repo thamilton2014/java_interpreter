@@ -18,7 +18,7 @@ public class BinaryExpression implements Expression
 		if (expr1 == null || expr2 == null)
 			throw new IllegalArgumentException ("[Binary Expression] null expression argument.");
         if (op == null)
-            throw new IllegalArgumentException("[Binary Expression] null expression argument.");
+            throw new IllegalArgumentException("[Binary Expression] null Arithmetic Operator argument.");
 		this.expr1 = expr1;
 		this.expr2 = expr2;
 		this.op = op;
