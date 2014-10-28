@@ -1,6 +1,4 @@
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * The Parsing class should detect any syntactical or semantic errors.
@@ -42,7 +40,7 @@ public class Parser {
      * @throws ParserException
      */
     public Feature parse() throws LexicalException, ParserException {
-        Token token = lex.getNextToken();
+        Token token = getNextToken();
         match(token, TokenType.FEATURE_TOK);
         getId();
         token = lex.getNextToken();
@@ -52,7 +50,7 @@ public class Parser {
         Compound compound = getCompound();
         token = lex.getNextToken();
         match(token, TokenType.END_TOK);
-        if (token.getTokType() != TokenType.EOS_TOK)
+        if (token.getTokType() != TokenType.END_TOK)
             throw new ParserException("garbage at end of program");
         return new Feature(compound);
     }
