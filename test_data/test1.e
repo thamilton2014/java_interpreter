@@ -1,5 +1,5 @@
 feature A is
-do 
+do
 	x := 3
 	print ( x )
 end

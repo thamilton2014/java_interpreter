@@ -7,3 +7,7 @@ interpreted and execute the program. The tokens in this language are separated b
 detects syntactical and semantic errors. The first such error discovered causes an appropriate error message and prints
 the error while terminating the program. Run-time errors are also detected and the appropriate error message is printed 
 and terminates the program as well.
+
+## How-to-use
+To execute the parsing application, use the run-rast shell script accordingly:
+sh run-fast <file_name>
