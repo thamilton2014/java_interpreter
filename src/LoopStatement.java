@@ -27,13 +27,8 @@ public class LoopStatement implements Statement {
     /**
      *
      */
-    @Override
     public void execute() {
         for(assignment.execute();!booleanExpression.evaluate();)
             compound.execute();
-//        assignment.evaluate();
-//        while(booleanExpression.evaluate() != 0){
-//            codeBlock.evaluate();
-//        }
     }
 }

@@ -15,7 +15,6 @@ public class Constant implements Expression {
     /**
      * @return value
      */
-    @Override
     public int evaluate() {
         return value;
     }

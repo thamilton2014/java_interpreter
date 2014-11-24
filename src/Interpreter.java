@@ -10,7 +10,7 @@ public class Interpreter {
      */
     public static void main(String[] args) {
         try {
-            Parser p = new Parser(System.getProperty("user.dir") + "/test_data/test1.e");
+            Parser p = new Parser(System.getProperty("user.dir") + "/test_data/test4.e");
             Feature feature = p.parse();
             feature.execute();
             Memory.displayMemory();

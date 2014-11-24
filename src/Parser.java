@@ -19,20 +19,6 @@ public class Parser {
     }
 
     /**
-     * @throws LexicalException
-     * @throws ParserException
-     */
-//    public void execute() throws LexicalException, ParserException {
-
-//        Feature program;
-
-//        while (lex.getLookaheadToken().getTokType() != TokenType.EOS_TOK) {
-//            program = getProgram();
-//            program.evaluate();
-//        }
-//    }
-
-    /**
      * <feature> -> feature <id> is do <compound> end
      *
      * @return program (Change to feature)
@@ -73,30 +59,12 @@ public class Parser {
             token = getLookAheadToken();
         }
         return compound;
-// return new Compound(getStatementList());
     }
 
     private boolean isValidStart(Token token){
         return token.getTokType() == TokenType.ID_TOK || token.getTokType() == TokenType.IF_TOK
                 || token.getTokType() == TokenType.PRINT_TOK || token.getTokType() == TokenType.FROM_TOK;
     }
-
-    /**
-     * @return statementList
-     * @throws LexicalException
-     * @throws ParserException
-     */
-//    private List<Statement> getStatementList() throws LexicalException, ParserException {
-//        List<Statement> statementList;
-//
-//        statementList = new ArrayList<Statement>();
-//        while (lex.getLookaheadToken().getTokType() == TokenType.PRINT_TOK
-//                || lex.getLookaheadToken().getTokType() == TokenType.ID_TOK
-//                || lex.getLookaheadToken().getTokType() == TokenType.IF_TOK
-//                || lex.getLookaheadToken().getTokType() == TokenType.FROM_TOK)
-//            statementList.add(getStatement());
-//        return statementList;
-//    }
 
     /**
      * <statement> -> <assignment_statement> | <print_statement> | <if_statement> | <loop_statement>
@@ -170,7 +138,7 @@ public class Parser {
 
     /**
      * <if_statement> -> if <boolean_expression> then <compound> else <compound> end
-     *
+     *@TODO need to fix something here.
      * @return If_Statement
      * @throws LexicalException
      * @throws ParserException

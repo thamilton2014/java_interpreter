@@ -28,7 +28,6 @@ public class BinaryExpression implements Expression
      *
      * @return value
      */
-	@Override
 	public int evaluate()
 	{
 		int value;
