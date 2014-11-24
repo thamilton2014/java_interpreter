@@ -9,8 +9,8 @@ import java.util.Scanner;
  */
 public class LexicalAnalyzer {
 
-    final private List<Token> tokens;
-
+    private List<Token> tokens;
+    final private String fileName;
     /**
      * @param fileName File
      * @throws FileNotFoundException
@@ -19,6 +19,11 @@ public class LexicalAnalyzer {
     public LexicalAnalyzer(String fileName) throws FileNotFoundException, LexicalException {
         if (fileName == null || fileName.length() == 0)
             throw new IllegalArgumentException("[Lexical Analyzer] invalid file name argument");
+        this.fileName = fileName;
+        init();
+    }
+
+    private void init() throws FileNotFoundException, LexicalException {
         tokens = new ArrayList<Token>();
         int lineNumber = 0;
         Scanner sourceCode = new Scanner(new File(fileName));
@@ -36,7 +41,7 @@ public class LexicalAnalyzer {
      * @throws LexicalException
      */
     private void processLine(String line, int lineNumber) throws LexicalException {
-        int index = 0;
+        int index;
         index = skipWhiteSpace(line, 0);
         while (index < line.length()) {
             String lexeme = getLexeme(line, index);

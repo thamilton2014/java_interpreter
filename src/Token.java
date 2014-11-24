@@ -1,7 +1,7 @@
 /**
  * The Token class creates a data structure.
  */
-public class Token {
+public class Token implements Comparable<Token> {
     private int rowNumber;
     private int columnNumber;
     private String lexeme;
@@ -56,5 +56,10 @@ public class Token {
      */
     public TokenType getTokType() {
         return tokType;
+    }
+
+    @Override
+    public int compareTo(Token token) {
+        return 0;
     }
 }
