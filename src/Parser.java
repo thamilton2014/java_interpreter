@@ -335,4 +335,8 @@ public class Parser {
         }
         return token;
     }
+
+    private void log_msg(String input){
+        logger.info(input);
+    }
 }
