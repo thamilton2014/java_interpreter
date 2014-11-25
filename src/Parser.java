@@ -1,3 +1,5 @@
+import org.apache.log4j.Logger;
+
 import java.io.FileNotFoundException;
 
 /**
@@ -6,7 +8,7 @@ import java.io.FileNotFoundException;
 public class Parser {
 
     private LexicalAnalyzer lex;
-
+    static Logger logger = Logger.getLogger(Parser.class.getName());
 
     /**
      * @param fileName -
