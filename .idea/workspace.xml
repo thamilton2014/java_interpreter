@@ -6,9 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="fe0e8bd8-d27c-4da5-b34e-109bd4e7edb3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+=======
+    <list default="true" id="fe0e8bd8-d27c-4da5-b34e-109bd4e7edb3" name="Default" comment="" />
+>>>>>>> feature_logging
     <ignored path="Example_project.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -626,7 +630,11 @@
       <workItem from="1416865052295" duration="5316000" />
       <workItem from="1416870794401" duration="47000" />
       <workItem from="1416918425817" duration="351000" />
+<<<<<<< HEAD
       <workItem from="1416922792242" duration="181000" />
+=======
+      <workItem from="1416922792242" duration="249000" />
+>>>>>>> feature_logging
     </task>
     <task id="LOCAL-00001" summary="Updates">
       <created>1412336612804</created>
@@ -652,7 +660,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="167949000" />
+=======
+    <option name="totallyTimeSpent" value="168017000" />
+>>>>>>> feature_logging
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
