@@ -9,6 +9,7 @@ public class Interpreter {
     private static LogManager logger = LogManager.getLogManager();
     /**
      * @param args command line arguments must not be null.
+     *             test feature
      */
     public static void main(String[] args) {
         try {
