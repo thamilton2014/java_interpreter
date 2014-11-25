@@ -41,6 +41,7 @@ public class LexicalAnalyzer {
      * @throws LexicalException
      */
     private void processLine(String line, int lineNumber) throws LexicalException {
+
         int index;
         index = skipWhiteSpace(line, 0);
         while (index < line.length()) {
