@@ -28,9 +28,14 @@ public class LexicalAnalyzer {
     }
 
     private void init() throws FileNotFoundException, LexicalException {
+        Scanner sourceCode;
+        if (new File(fileName).exists())
+            sourceCode = new Scanner(new File(fileName));
+        else
+            sourceCode = new Scanner(fileName);
         tokens = new ArrayList<Token>();
         int lineNumber = 0;
-        Scanner sourceCode = new Scanner(new File(fileName));
+//        Scanner sourceCode = new Scanner(new File(fileName));
         while (sourceCode.hasNext()) {
             lineNumber++;
             processLine(sourceCode.nextLine(), lineNumber);
