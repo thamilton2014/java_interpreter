@@ -1,3 +1,5 @@
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -9,8 +11,10 @@ import java.util.Scanner;
  */
 public class LexicalAnalyzer {
 
+    static Logger logger = Logger.getLogger(Parser.class.getName());
     private List<Token> tokens;
     final private String fileName;
+
     /**
      * @param fileName File
      * @throws FileNotFoundException
@@ -197,5 +201,9 @@ public class LexicalAnalyzer {
                 return true;
         }
         return false;
+    }
+
+    private void log_msg(String input) {
+        logger.info("[Lexical Analyzer] " + input);
     }
 }
