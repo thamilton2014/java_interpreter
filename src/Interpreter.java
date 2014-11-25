@@ -1,10 +1,12 @@
 import java.io.FileNotFoundException;
+import java.util.logging.LogManager;
 
 /**
  * The Interpreter class
  */
 public class Interpreter {
 
+    private static LogManager logger = LogManager.getLogManager();
     /**
      * @param args command line arguments must not be null.
      */
